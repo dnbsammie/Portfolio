@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. RIVERA</title>
+    <link rel="icon" type="svg" href="./assets/logo.svg">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <canvas id="waveCanvas"></canvas>
+    <header class="header">
+        <a href="index.html" class="logo" id="logo">samuel-rivera</a>
+        <div class="head-r">
+            <a class="language" id="language">EN</a>
+            <a class="mode" id="mode">&#9680;</a>
+            <a class="toggle" id="toggle">&#9776;</a>
+        </div>
+        <div class="scroll-indicator"></div>
+    </header>
+    <menu class="menu" id="menu">
+        <div class="top-nav">
+            <a class="xmark" id="xmark">&times;</a>
+        </div>
+        <nav class="nav">
+            <a href="index.html">HOME</a>
+            <a href="./pages/about.html">ABOUT</a>
+            <a href="./pages/portfolio.html">PORTFOLIO</a>
+            <a href="./pages/music.html">MUSIC</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        <div class="bot-nav">
+            <div class="socials">
+                <a href="mailto:seriveramosq@gmail.com" class="fa-solid fa-envelope" target="_blank"></a>
+                <a href="https://open.spotify.com/intl-es/artist/6cxOnM0png8kY2ue6cXljn?si=aKizrW-aRPS6VXYT7AnMAw"
+                    class="fa-brands fa-spotify" target="_blank"></a>
+                <a href="https://github.com/dnbsammie" class="fa-brands fa-github" target="_blank"></a>
+                <a href="https://www.instagram.com/dnbsammie" class="fa-brands fa-instagram"
+                    target="_blank"></a>
+                <a href="https://www.linkedin.com/in/seriveramosq" class="fa-brands fa-linkedin-in"
+                    target="_blank"></a>
+                <a href="https://www.youtube.com/@dnbsammie" class="fa-brands fa-youtube" target="_blank"></a>
+            </div>
+        </div>
+    </menu>
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-l">
+                    <div class="name">
+                        <h5>SAMUEL RIVERA</h5>
+                        <p>SOFTWARE DEVELOPER</p>
+                    </div>
+                </div>
+                <div class="hero-r">
+                    <button class="line-button" id="gt-button">GET IN TOUCH</button>
+                    <button class="fill-button" id="vp-button">VIEW PORTFOLIO</button>
+                </div>
+            </div>
+        </section>
+        <section class="profile" id="profile">
+            <div class="container">
+                <div class="prof-l">
+                    <img src="./assets/profile.webp" alt="profile-img">
+                </div>
+                <div class="prof-r">
+                    <div class="bout">
+                        <p>With an interest in technology, innovation and continuous improvement, I seek to apply my
+                            knowledge in projects that positively impact
+                            society. Always looking for new opportunities to learn and grow professionally.</p>
+                        <br>
+                        <p>I'm focused on Java and other OOP languages. Aside from coding, I love music, sound, and
+                            motorsport. When I usually practice, my projects are focused on these aspects.
+                        </p>
+                    </div>
+                    <div class="cta">
+                        <div class="socials">
+                            <a href="mailto:seriveramosq@gmail.com" class="fa-solid fa-envelope"></a>
+                            <a href="https://github.com/dnbsammie" class="fa-brands fa-github" target="_blank"></a>
+                            <a href="https://www.instagram.com/dnbsammie" class="fa-brands fa-instagram"
+                                target="_blank"></a>
+                            <a href="https://www.linkedin.com/in/seriveramosq" class="fa-brands fa-linkedin-in"
+                                target="_blank"></a>
+                            <a href="https://www.youtube.com/@dnbsammie" class="fa-brands fa-youtube"
+                                target="_blank"></a>
+                        </div>
+                        <button type="button">RESUME</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="projects" id="projects">
+            <div class="sticky">
+                <h1>PROJECTS</h1>
+                
+            </div>
+        </section>
+
+        <div class="video-modal" id="videoModal">
+            <div class="modal-content">
+                <div class="video-container">
+                    <iframe id="project-video" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+            <br>
+            <button class="close-modal" id="closeModal">Close</button>
+        </div>
+
+        <section class="services" id="services">
+            <div class="container">
+                <div class="serv-l">
+                    <h2>WHAT I DO?</h2>
+                </div>
+                <div class="serv-r">
+                    <div class="serv-card">
+                        <h5>Software</h5>
+                        <br>
+                        <p>Developing robust Java applications</p>
+                    </div>
+                    <div class="serv-card">
+                        <h5>Web</h5>
+                        <br>
+                        <p>I design and create responsive and animated websites in html and css.</p>
+                    </div>
+                    <div class="serv-card">
+                        <h5>Audio</h5>
+                        <br>
+                        <p>I develop vst plugins with C++ and JUCE, as well as having my own musical projects.</p>
+                    </div>
+                    <div class="serv-card">
+                        <h5>Videogames</h5>
+                        <br>
+                        <p>I create and design 2D and 3D video games using C# in Unity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="contact" id="contact">
+            <div class="container">
+                <div class="cnt-l">
+                    <h1>GET IN TOUCH</h1>
+                    <img src="./assets/cnt.webp" alt="contact-img">
+                    <p class="copyright">&copy; 2025 <a href="index.html">Samuel Rivera</a>. All
+                        rights reserved.</p>
+                </div>
+                <div class="cnt-r">
+                    <div class="sitemap">
+                        <a href="index.html">HOME</a>
+                        <p>In case you want to check the site again.</p>
+                        <hr>
+                    </div>
+                    <div class="sitemap">
+                        <a href="./pages/about.html">ABOUT</a>
+                        <p>A section dedicated to a personal bio.</p>
+                        <hr>
+                    </div>
+                    <div class="sitemap">
+                        <a href="./pages/portfolio.html">PORTFOLIO</a>
+                        <p>A visual compilation of previous works.</p>
+                        <hr>
+                    </div>
+                    <div class="sitemap">
+                        <a href="./pages/music.html">MUSIC</a>
+                        <p>Explore a sound gallery</p>
+                        <hr>
+                    </div>
+                    <div class="sitemap">
+                        <a href="mailto:seriveramosq@gmail.com" target="_blank">CONTACT</a>
+                        <p>Send an Email for work, collaborations, and more.</p>
+                        <hr>
+                    </div>
+                    <div class="socials">
+                        <a href="https://open.spotify.com/intl-es/artist/6cxOnM0png8kY2ue6cXljn?si=aKizrW-aRPS6VXYT7AnMAw"
+                            class="fa-brands fa-spotify" target="_blank"></a>
+                        <a href="https://github.com/dnbsammie" class="fa-brands fa-github" target="_blank"></a>
+                        <a href="https://www.instagram.com/dnbsammie" class="fa-brands fa-instagram"
+                            target="_blank"></a>
+                        <a href="https://www.linkedin.com/in/seriveramosq" class="fa-brands fa-linkedin-in"
+                            target="_blank"></a>
+                        <a href="https://www.youtube.com/@dnbsammie" class="fa-brands fa-youtube" target="_blank"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/modules/language.js"></script>
+</body>
+
+</html>
