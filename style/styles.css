@@ -2,7 +2,7 @@
 
 :root {
     --color-1: #f5f5f5;
-    --color-2: #7f7f7f;
+    --color-2: #bebebe;
     --color-3: #0a0a0a;
     --color-a: #ff5a1f;
     --font-1: "Questrial", serif;
@@ -18,6 +18,7 @@
     --gradient-cd: linear-gradient(120deg,
             rgba(17, 17, 17, 0.1),
             rgba(28, 28, 28, 0.1));
+    --gradient-db: linear-gradient(0deg, rgba(245, 245, 245, 1) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(245, 245, 245, 1) 100%);
     --box-shadow-1: 0 2px 10px rgba(0, 0, 0, 0.1);
     --box-shadow-2: rgba(220, 220, 220, 0.2);
     --box-shadow-3: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -25,12 +26,13 @@
 
 .dark-mode {
     --color-1: #0a0a0a;
-    --color-2: #7f7f7f;
+    --color-2: #7d7d7d;
     --color-3: #f5f5f5;
     --gradient-vd: linear-gradient(0deg, rgba(10, 10, 10, 1) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 100%);
     --gradient-cd: linear-gradient(120deg,
             rgba(128, 128, 128, 0.1),
             rgba(179, 179, 179, 0.1));
+    --gradient-db: linear-gradient(0deg, rgba(10,10,10,1) 0%, rgba(255,255,255,0) 25%, rgba(255,255,255,0) 75%, rgba(0,0,0,1) 100%);
 }
 
 * {
@@ -64,54 +66,15 @@ body::-webkit-scrollbar-thumb:hover {
     background: var(--color-a);
 }
 
-h1 {
-    font-size: var(--h1-size);
-    font-weight: 400;
-    letter-spacing: 2vw;
-}
-
-h2 {
-    font-size: var(--h2-size);
-    font-weight: 300;
-    letter-spacing: 1.75vw;
-}
-
-h3 {
-    font-size: var(--h3-size);
-    font-weight: 200;
-    letter-spacing: 1.5vw;
-}
-
-h4 {
-    font-size: var(--h4-size);
-    font-weight: 100;
-    letter-spacing: 1vw;
-}
-
-h5 {
-    font-size: var(--h5-size);
-    font-weight: 100;
-}
-
-h6 {
-    font-size: var(--h6-size);
-    font-weight: 100
-}
-
-p {
-    font-size: var(--p-size);
-    font-weight: 100;
-}
-
-a {
-    font-size: var(--a-size);
-    color: inherit;
-    cursor: pointer;
-}
-
-a:hover {
-    color: var(--color-a);
-}
+h1 {font-size: var(--h1-size);font-weight: 400;letter-spacing: 2vw;}
+h2 {font-size: var(--h2-size);font-weight: 300;letter-spacing: 1.75vw;}
+h3 {font-size: var(--h3-size);font-weight: 200;letter-spacing: 1.5vw;}
+h4 {font-size: var(--h4-size);font-weight: 100;letter-spacing: 1vw;}
+h5 {font-size: var(--h5-size);font-weight: 100;}
+h6 {font-size: var(--h6-size);font-weight: 100;}
+p {font-size: var(--p-size);font-weight: 100;}
+a {font-size: var(--a-size);color: inherit;cursor: pointer;}
+a:hover {color: var(--color-a);}
 
 img {
     width: 100%;
@@ -129,7 +92,7 @@ hr {
 }
 
 button {
-    padding: 1vh 4vw;
+    padding: 1vh 2vw;
     cursor: pointer;
     width: fit-content;
     text-decoration: none;
@@ -145,19 +108,13 @@ button {
     color: var(--color-3);
 }
 
-.line-button:hover {
-    border: 3px solid var(--color-a);
-    background-color: transparent;
-    color: var(--color-a);
-}
-
 .fill-button {
     border: 3px solid var(--color-3);
     background-color: var(--color-3);
     color: var(--color-1);
 }
 
-.fill-button:hover {
+button:hover {
     border: 3px solid var(--color-a);
     background-color: var(--color-a);
     color: var(--color-1);
@@ -191,8 +148,8 @@ button {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: var(--color-3);
-    display: none;
+    background-color: var(--color-1);
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -209,7 +166,7 @@ button {
 }
 
 .loader {
-    border: 5px solid var(--color-1);
+    border: 5px solid var(--color-3);
     border-top: 5px solid transparent;
     border-radius: 50%;
     width: 50px;
@@ -219,6 +176,7 @@ button {
 
 /* Background*/
 #waveCanvas {
+    background-color: inherit;
     position: fixed;
     top: 0;
     left: 0;
@@ -275,7 +233,7 @@ header a:hover {
     height: 2px;
     background-color: transparent;
     transition: width 0.1s ease-in-out;
-    background-image: linear-gradient(to right, var(--color-1), var(--color-a));
+    background-image: linear-gradient(to right, var(--color-3), var(--color-a));
 }
 
 /* Menu */
@@ -290,10 +248,10 @@ menu {
     width: 100%;
     height: 100%;
     padding: 2vh;
-    background: var(--color-1);
+    background: var(--color-3);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    color: var(--color-3);
+    color: var(--color-1);
     z-index: 1000;
     opacity: 0;
     transition: left 0.5s ease, opacity 0.5s ease;
@@ -356,7 +314,11 @@ menu.socials {
 }
 
 .bot-nav .socials a {
-    color: var(--color-3);
+    color: var(--color-1);
+}
+
+.bot-nav .socials a:hover {
+    color: var(--color-a);
 }
 
 .menu.open .nav a,
@@ -401,6 +363,30 @@ section {
     width: 100%;
     height: 100%;
     padding: 5vh 4vw;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Transition */
+.transition_div {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-1);
+    z-index: 2000;
+    transition: transform 1s ease;
+    will-change: transform;
+}
+
+.transition_div.animate_in {
+    transform: translateX(100%);
+}
+
+.transition_div.animate_out {
+    transform: translateX(0);
 }
 
 /* Home */
@@ -486,7 +472,8 @@ section {
 
 /* Projects */
 .projects {
-    height: 400vh;
+    background: var(--gradient-db);
+    height: 500vh;
 }
 
 .sticky {
@@ -499,8 +486,8 @@ section {
 .scroll_section {
     position: absolute;
     top: 0;
-    height: 80%;
-    width: 400vw;
+    height: 100%;
+    width: 500vw;
     will-change: transform;
     display: flex;
     justify-content: space-between;
@@ -520,7 +507,6 @@ section {
 .title h1 {
     font-size: 5.5vh;
     letter-spacing: 2.5vw;
-    text-shadow: 2px 2px 5px black;
 }
 
 .project {
@@ -687,41 +673,50 @@ iframe {
     height: fit-content;
     text-align: justify;
 }
+
 /* Footer */
-footer{
+footer {
     height: 100vh;
-    background-color: var(--color-1);
+    background-color: var(--color-2);
+    position: relative;
 }
 
-footer .container{
+footer .container {
     justify-content: space-between;
 }
 
-.cnt-l, .cnt-r{
+footer a:hover,
+footer .socials a:hover {
+    color: var(--color-a);
+}
+
+.cnt-l,
+.cnt-r {
     width: 100%;
     height: 45%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .cnt-l img {
     aspect-ratio: 1/1;
     width: 100%;
     height: auto;
 }
 
-.cnt-r .socials{
+.cnt-r .socials {
     width: 100%;
 }
 
-.sitemap{
+.sitemap {
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 0.5vh;
 }
 
-.sitemap a{
+.sitemap a {
     font-size: var(--h5-size);
 }
 
@@ -738,7 +733,7 @@ footer .container{
     }
 
     button {
-        padding: 1vh 6vw;
+        padding: 1vh 4vw;
     }
 
     hr {
@@ -839,8 +834,10 @@ footer .container{
     .serv-card:nth-child(4) {
         align-self: flex-end;
     }
+
     /* Footer */
-    .cnt-l, .cnt-r{
+    .cnt-l,
+    .cnt-r {
         width: 45%;
         height: 80%;
     }
@@ -879,5 +876,17 @@ footer .container{
 
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }

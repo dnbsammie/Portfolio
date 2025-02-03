@@ -9,13 +9,14 @@
     <link rel="stylesheet" href="./style/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
     <div class="preloader">
         <div class="loader"></div>
     </div>
+    <div class="transition_div"></div>
     <canvas id="waveCanvas"></canvas>
     <header class="header">
         <a href="index.html" class="logo" id="logo">samuel-rivera</a>
@@ -59,8 +60,8 @@
                     </div>
                 </div>
                 <div class="hero-r">
-                    <button class="line-button" id="gt-button">GET IN TOUCH</button>
-                    <button class="fill-button" id="vp-button">PORTFOLIO</button>
+                    <button class="line-button" id="button1">GET IN TOUCH</button>
+                    <button class="fill-button" id="button2">PORTFOLIO</button>
                 </div>
             </div>
         </section>
@@ -71,12 +72,12 @@
                 </div>
                 <div class="prof-r">
                     <div class="bout">
-                        <h2>WHO I AM?</h2>
-                        <p>With an interest in technology, innovation and continuous improvement, I seek to apply my
+                        <h2 id="t1">WHO I AM?</h2>
+                        <p id="p1">With an interest in technology, innovation and continuous improvement, I seek to apply my
                             knowledge in projects that positively impact
                             society. Always looking for new opportunities to learn and grow professionally.</p>
                         <br>
-                        <p>I'm focused on Java and other OOP languages. Aside from coding, I love music, sound, and
+                        <p id="p2">I'm focused on Java and other OOP languages. Aside from coding, I love music, sound, and
                             motorsport. When I usually practice, my projects are focused on these aspects.
                         </p>
                     </div>
@@ -90,7 +91,7 @@
                                 class="fa-brands fa-spotify" target="_blank"></a>
                             <a href="https://www.youtube.com/@dnbsammie" class="fa-brands fa-youtube" target="_blank"></a>
                         </div>
-                        <button type="button" class="fill-button" id="resumebutton">RESUME</button>
+                        <button type="button" class="fill-button" id="button3">RESUME</button>
                     </div>
                 </div>
             </div>
@@ -98,6 +99,10 @@
         <section class="projects" id="projects">
             <div class="sticky">
                 <div class="scroll_section">
+                    <div class="title">
+                        <h1 id="t2">PROJECTS</h1>
+                        <h2>04</h2>
+                    </div>
                     <div class="project">
                         <img src="./assets/proyect1.webp" alt="Image 1">
                         <div class="project_content">
@@ -119,7 +124,7 @@
                         <div class="project_content">
                             <div class="project-top">
                                 <h5>PROYECT 02</h5>
-                                <h6>description</h6>
+                                <h6">description</h6>
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/dnbsammie/repo" class="fa-brands fa-github"
@@ -210,7 +215,7 @@
                 <div class="cnt-l">
                     <h1>GET IN TOUCH</h1>
                     <img src="./assets/cnt.webp" alt="contact-img">
-                    <p class="copyright">&copy; 2025 <a href="index.html">Samuel Rivera</a>. All
+                    <p class="copyright">&copy; 2025 Samuel Rivera. All
                         rights reserved.</p>
                 </div>
                 <div class="cnt-r">
@@ -253,8 +258,7 @@
             </div>
         </footer>
     </main>
-    <script src="./scripts/main.js"></script>
-    <script src="./scripts/modules/language.js"></script>
+    <script src="./scripts/main.js" type="module" defer></script>
 </body>
 
 </html>
