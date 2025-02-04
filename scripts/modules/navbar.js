@@ -1,21 +1,21 @@
 // Menu Toggle
-const toggle = document.querySelector('.toggle');
-const menu = document.getElementById('menu');
-const close = document.getElementById('xmark');
-const navLinks = document.querySelectorAll('.nav a');
+const toggle = document.querySelector(".toggle");
+const menu = document.getElementById("menu");
+const close = document.getElementById("xmark");
+const navLinks = document.querySelectorAll(".nav a");
 
-toggle.addEventListener('click', (event) => {
+toggle.addEventListener("click", (event) => {
   event.preventDefault();
-  menu.classList.toggle('open');
+  menu.classList.toggle("open");
 });
 
-close.addEventListener('click', () => {
-  menu.classList.remove('open');
+close.addEventListener("click", () => {
+  menu.classList.remove("open");
 });
 
 navLinks.forEach(link => {
-  link.addEventListener('click', () => {
-      menu.classList.remove('open');
+  link.addEventListener("click", () => {
+      menu.classList.remove("open");
   });
 });
 // Scroll Indicator

@@ -9,14 +9,13 @@
     <link rel="stylesheet" href="./style/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="preloader">
         <div class="loader"></div>
     </div>
-    <div class="transition_div"></div>
     <canvas id="waveCanvas"></canvas>
     <header class="header">
         <a href="index.html" class="logo" id="logo">samuel-rivera</a>
@@ -32,11 +31,12 @@
             <a class="xmark" id="xmark">&times;</a>
         </div>
         <nav class="nav">
-            <a href="index.html">HOME</a>
-            <a href="./pages/about.html">ABOUT</a>
-            <a href="./pages/portfolio.html">PORTFOLIO</a>
-            <a href="./pages/music.html">MUSIC</a>
-            <a href="#contact">CONTACT</a>
+            <a href="index.html" class="nav-item" id="nav1">HOME</a>
+            <a href="#about" class="nav-item" id="nav2">ABOUT</a>
+            <a href="#projects" class="nav-item" id="nav3">PORTFOLIO</a>
+            <a href="#skills" class="nav-item" id="nav4">SKILLS</a>
+            <a href="#music" class="nav-item" id="nav5">MUSIC</a>
+            <a href="#contact" class="nav-item" id="nav6">CONTACT</a>
         </nav>
         <div class="bot-nav">
             <div class="socials">
@@ -53,43 +53,41 @@
     <main>
         <section class="hero" id="hero">
             <div class="container">
-                <div class="hero-l">
+                <div class="left-container">
                     <div class="name">
                         <h4>SAMUEL RIVERA</h4>
                         <h6>SOFTWARE DEVELOPER</h6>
                     </div>
                 </div>
-                <div class="hero-r">
-                    <button class="line-button" id="button1">GET IN TOUCH</button>
-                    <button class="fill-button" id="button2">PORTFOLIO</button>
+                <div class="right-container">
+                    <button class="line-button"><a href="#projects" id="button1">PROJECTS</a></button>
+                    <button class="fill-button"><a href="#contact" id="button2">GET IN TOUCH</a></button>
                 </div>
             </div>
         </section>
-        <section class="profile" id="profile">
+        <section class="about" id="about">
             <div class="container">
-                <div class="prof-l">
-                    <img src="./assets/profile.webp" alt="profile-img">
+                <div class="left-container">
+                    <img src="./assets/" alt="profile-img" loading="lazy">
                 </div>
-                <div class="prof-r">
-                    <div class="bout">
-                        <h2 id="t1">WHO I AM?</h2>
-                        <p id="p1">With an interest in technology, innovation and continuous improvement, I seek to apply my
-                            knowledge in projects that positively impact
-                            society. Always looking for new opportunities to learn and grow professionally.</p>
-                        <br>
-                        <p id="p2">I'm focused on Java and other OOP languages. Aside from coding, I love music, sound, and
-                            motorsport. When I usually practice, my projects are focused on these aspects.
-                        </p>
-                    </div>
+                <div class="right-container">
+                    <h2 id="t1">WHAT ABOUT ME?</h2>
+                    <p id="p1">Hi, i'm Samuel, a software developer originally from Bogotá D.C. I love working on
+                        challenging projects that combine aesthetics and functionality. Also, outside of programming, I
+                        enjoy music, motorsport and exploring new ideas that inspire me. I always seek to learn and
+                        improve, both professionally and personally, to offer the best in each project.</p>
                     <div class="cta">
                         <div class="socials">
                             <a href="mailto:seriveramosq@gmail.com" class="fa-solid fa-envelope"></a>
-                            <a href="https://www.linkedin.com/in/seriveramosq" class="fa-brands fa-linkedin-in" target="_blank"></a>
+                            <a href="https://www.linkedin.com/in/seriveramosq" class="fa-brands fa-linkedin-in"
+                                target="_blank"></a>
                             <a href="https://github.com/dnbsammie" class="fa-brands fa-github" target="_blank"></a>
-                            <a href="https://www.instagram.com/dnbsammie" class="fa-brands fa-instagram" target="_blank"></a>
+                            <a href="https://www.instagram.com/dnbsammie" class="fa-brands fa-instagram"
+                                target="_blank"></a>
                             <a href="https://open.spotify.com/intl-es/artist/6cxOnM0png8kY2ue6cXljn?si=aKizrW-aRPS6VXYT7AnMAw"
                                 class="fa-brands fa-spotify" target="_blank"></a>
-                            <a href="https://www.youtube.com/@dnbsammie" class="fa-brands fa-youtube" target="_blank"></a>
+                            <a href="https://www.youtube.com/@dnbsammie" class="fa-brands fa-youtube"
+                                target="_blank"></a>
                         </div>
                         <button type="button" class="fill-button" id="button3">RESUME</button>
                     </div>
@@ -101,69 +99,35 @@
                 <div class="scroll_section">
                     <div class="title">
                         <h1 id="t2">PROJECTS</h1>
-                        <h2>04</h2>
+                        <h2>02</h2>
                     </div>
                     <div class="project">
-                        <img src="./assets/proyect1.webp" alt="Image 1">
+                        <img src="./assets/aural.webp" alt="Image 1" loading="lazy">
                         <div class="project_content">
                             <div class="project-top">
-                                <h5>PROYECT 01</h5>
-                                <h6>description</h6>
+                                <h5>AURAL</h5>
+                                <h6>Audio Player</h6>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/dnbsammie/repo" class="fa-brands fa-github"
+                                <a href="https://github.com/dnbsammie/Aural" class="fa-brands fa-github"
                                     target="_blank"></a>
                                 <a href="#video1" class="fa-brands fa-youtube"
                                     data-video-url="//www.youtube.com/embed/"></a>
-                                <a href="portfolio.html#proyect1" class="fa-solid fa-info"></a>
                             </div>
                         </div>
                     </div>
                     <div class="project">
-                        <img src="./assets/proyect1.webp" alt="Image 1">
+                        <img src="./assets/soundmorph.webp" alt="Image 2" loading="lazy">
                         <div class="project_content">
                             <div class="project-top">
-                                <h5>PROYECT 02</h5>
-                                <h6">description</h6>
+                                <h5>SOUNDMORPH</h5>
+                                <h6">VST FX Pluggin</h6>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/dnbsammie/repo" class="fa-brands fa-github"
+                                <a href="https://github.com/dnbsammie/SoundMorph" class="fa-brands fa-github"
                                     target="_blank"></a>
                                 <a href="#video1" class="fa-brands fa-youtube"
                                     data-video-url="//www.youtube.com/embed/"></a>
-                                <a href="portfolio.html#proyect2" class="fa-solid fa-info"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img src="./assets/proyect3.webp" alt="Image 3">
-                        <div class="project_content">
-                            <div class="project-top">
-                                <h5>PROYECT 03</h5>
-                                <h6>description</h6>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/dnbsammie/repo" class="fa-brands fa-github"
-                                    target="_blank"></a>
-                                <a href="#video1" class="fa-brands fa-youtube"
-                                    data-video-url="//www.youtube.com/embed/"></a>
-                                <a href="portfolio.html#proyect3" class="fa-solid fa-info"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project">
-                        <img src="./assets/proyect4.webp" alt="Image 4">
-                        <div class="project_content">
-                            <div class="project-top">
-                                <h5>PROYECT 04</h5>
-                                <h6>description</h6>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/dnbsammie/repo" class="fa-brands fa-github"
-                                    target="_blank"></a>
-                                <a href="#video1" class="fa-brands fa-youtube"
-                                    data-video-url="//www.youtube.com/embed/"></a>
-                                <a href="portfolio.html#proyect4" class="fa-solid fa-info"></a>
                             </div>
                         </div>
                     </div>
@@ -178,70 +142,95 @@
                 </div>
             </div>
             <br>
-            <button class="close-modal line-button" id="closeModal">Close</button>
+            <button class="close-modal line-button" id="closeModal">CLOSE</button>
         </div>
 
-        <section class="services" id="services">
+        <section class="skills" id="skills">
             <div class="container">
-                <div class="serv-l">
-                    <h2>WHAT I DO?</h2>
+                <div class="left-container">
+                    <h3 id="t3">SKILLS</h3>
+                    <svg viewBox="-140 -140 280 280" preserveAspectRatio="xMidYMid meet" class="radial-chart">
+                        <!-- Background hexagons -->
+                        <polygon class="hexagon" points="0,-100 86.6,-50 86.6,50 0,100 -86.6,50 -86.6,-50"></polygon>
+                        <polygon class="hexagon" points="0,-80 69.28,-40 69.28,40 0,80 -69.28,40 -69.28,-40"></polygon>
+                        <polygon class="hexagon" points="0,-60 51.96,-30 51.96,30 0,60 -51.96,30 -51.96,-30"></polygon>
+                        <polygon class="hexagon" points="0,-40 34.64,-20 34.64,20 0,40 -34.64,20 -34.64,-20"></polygon>
+                        <polygon class="hexagon" points="0,-20 17.32,-10 17.32,10 0,20 -17.32,10 -17.32,-10"></polygon>
+                        <!-- Skills data -->
+                        <polygon class="skill-data"
+                            points="0,-90 71.052,-41.82 72.24,42.84 0,43.0 -75.558,43.38 -83.79,-50"></polygon>
+                        <!-- Skill labels -->
+                        <text class="skill-label" x="0" y="-120" id="hx1">problem-solving</text>
+                        <text class="skill-label" x="105" y="-65" id="hx2">innovation</text>
+                        <text class="skill-label" x="100" y="75" id="hx3">organization</text>
+                        <text class="skill-label" x="0" y="120" id="hx4">communication</text>
+                        <text class="skill-label" x="-100" y="75" id="hx5">critical-thinking</text>
+                        <text class="skill-label" x="-105" y="-65" id="hx6">creativity</text>
+                    </svg>
                 </div>
-                <div class="serv-r">
-                    <div class="serv-card">
+                <div class="right-container">
+                    <h3 id="t4">WHAT CAN I DO?</h3>
+                    <br>
+                    <div class="badge">
                         <h5>Software</h5>
                         <br>
-                        <p>Developing robust Java applications</p>
+                        <p id="p2">Developing robust Java applications</p>
                     </div>
-                    <div class="serv-card">
+                    <div class="badge">
                         <h5>Web</h5>
                         <br>
-                        <p>I design and create responsive and animated websites in html and css.</p>
+                        <p id="p3">I design and create responsive and animated websites in html and css.</p>
                     </div>
-                    <div class="serv-card">
+                    <div class="badge">
                         <h5>Audio</h5>
                         <br>
-                        <p>I develop vst plugins with C++ and JUCE, as well as having my own musical projects.</p>
+                        <p id="p4">I develop vst plugins with C++ and JUCE, as well as having my own musical projects.
+                        </p>
                     </div>
-                    <div class="serv-card">
+                    <div class="badge">
                         <h5>Videogames</h5>
                         <br>
-                        <p>I create and design 2D and 3D video games using C# in Unity.</p>
+                        <p id="p5">I create and design 2D and 3D video games using C# in Unity.</p>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="music" id="music">
+            <div class="container">
+                <h1>under construction</h1>
+            </div>
+        </section>
         <footer class="contact" id="contact">
             <div class="container">
-                <div class="cnt-l">
-                    <h1>GET IN TOUCH</h1>
-                    <img src="./assets/cnt.webp" alt="contact-img">
-                    <p class="copyright">&copy; 2025 Samuel Rivera. All
-                        rights reserved.</p>
+                <div class="left-container">
+                    <h2 id="t5">GET IN TOUCH</h2>
+                    <img src="./assets/" alt="contact-img" loading="lazy">
+                    <p id="copyright">© 2025 Samuel Rivera. All rights reserved.</p>
                 </div>
-                <div class="cnt-r">
+                <div class="right-container">
                     <div class="sitemap">
-                        <a href="index.html">HOME</a>
-                        <p>In case you want to check the site again.</p>
+                        <a href="#about" class="nav-item" id="nav2">ABOUT</a>
+                        <p id="p6">A section dedicated to my personal bio.</p>
                         <hr>
                     </div>
                     <div class="sitemap">
-                        <a href="./pages/about.html">ABOUT</a>
-                        <p>A section dedicated to a personal bio.</p>
+                        <a href="#projects" class="nav-item" id="nav3">PROJECTS</a>
+                        <p id="p7">A visual compilation of previous works.</p>
                         <hr>
                     </div>
                     <div class="sitemap">
-                        <a href="./pages/portfolio.html">PORTFOLIO</a>
-                        <p>A visual compilation of previous works.</p>
+                        <a href="#skills" class="nav-item" id="nav4">SKILLS</a>
+                        <p id="p8">Learn about my abilities.</p>
                         <hr>
                     </div>
                     <div class="sitemap">
-                        <a href="./pages/music.html">MUSIC</a>
-                        <p>Explore a sound gallery</p>
+                        <a href="#music" class="nav-item" id="nav5">MUSIC</a>
+                        <p id="p9">Explore a sound gallery.</p>
                         <hr>
                     </div>
                     <div class="sitemap">
-                        <a href="mailto:seriveramosq@gmail.com" target="_blank">CONTACT</a>
-                        <p>Send an Email for work, collaborations, and more.</p>
+                        <a href="mailto:seriveramosq@gmail.com" class="nav-item" id="nav6" target="_blank">CONTACT</a>
+                        <p id="p10">Send an Email for work, collaborations, and more.</p>
                         <hr>
                     </div>
                     <div class="socials">
