@@ -17,8 +17,7 @@ const languages = {
         t1: "WHAT ABOUT ME?",
         t2: "PROJECTS",
         t3: "SKILLS",
-        t4: "WHAT CAN I DO?",
-        t5: "GET IN TOUCH",
+        t4: "GET IN TOUCH",
         // Texts
         hx1: "problem-solving",
         hx2: "innovation",
@@ -57,8 +56,7 @@ const languages = {
         t1: "SOBRE MI?",
         t2: "PROYECTOS",
         t3: "HABILIDADES",
-        t4: "QUE PUEDO HACER?",
-        t5: "PONTE EN CONTACTO",
+        t4: "PONTE EN CONTACTO",
         // Texts
         hx1: "resolución de problemas",
         hx2: "inovación",
@@ -102,7 +100,6 @@ function changeLanguage(language) {
         t2: "t2",
         t3: "t3",
         t4: "t4",
-        t5: "t5",
         hx1: "hx1",
         hx2: "hx2",
         hx3: "hx3",
