@@ -1,15 +1,15 @@
 /* ==== Default Styles ===== */
 :root {
     --font-main: "JetBrains Mono", monospace;
-    --h1-size: clamp(4rem, 15vh, 7.5rem);
-    --h2-size: clamp(3rem, 8vh, 6rem);
-    --h3-size: clamp(2rem, 4vh, 4rem);
-    --h4-size: clamp(1.8rem, 3vh, 3.6rem);
-    --h5-size: clamp(1.4rem, 1.5vh, 3.2rem);
-    --h6-size: clamp(1.2rem, 1.25vh, 2.8rem);
-    --p-size: clamp(1rem, 1.10vh, 2.4rem);
-    --a-size: clamp(1rem, 1vh, 2rem);
-    --d-gap: clamp(1rem, 2vh, 5rem);
+    --h1-size: clamp(2rem, 7.5vh, 3.75rem);
+    --h2-size: clamp(1.5rem, 4vh, 3rem);
+    --h3-size: clamp(1rem, 2vh, 2rem);
+    --h4-size: clamp(0.9rem, 1.5vh, 1.8rem);
+    --h5-size: clamp(0.7rem, 0.75vh, 1.6rem);
+    --h6-size: clamp(0.6rem, 0.625vh, 1.4rem);
+    --p-size: clamp(0.5rem, 0.55vh, 1.2rem);
+    --a-size: clamp(0.5rem, 0.5vh, 1rem);
+    --d-gap: clamp(0.5rem, 1vh, 2.5rem);
     --pad-1: min(77px, 2%);
     --pad-2: min(77px, 2%) min(154px, 10%);
     --pad-3: min(77px, 2%) min(308px, 20%);
@@ -349,6 +349,18 @@ section {
 
 /* == Responsive Settings == */
 @media(min-width: 810px) {
+    :root {
+        --h1-size: clamp(4rem, 15vh, 7.5rem);
+        --h2-size: clamp(3rem, 8vh, 6rem);
+        --h3-size: clamp(2rem, 4vh, 4rem);
+        --h4-size: clamp(1.8rem, 3vh, 3.6rem);
+        --h5-size: clamp(1.4rem, 1.5vh, 3.2rem);
+        --h6-size: clamp(1.2rem, 1.25vh, 2.8rem);
+        --p-size: clamp(1rem, 1.10vh, 2.4rem);
+        --a-size: clamp(1rem, 1vh, 2rem);
+        --d-gap: clamp(1rem, 2vh, 5rem);
+    }
+
     a.button {
         width: min(350px, 45%);
     }
