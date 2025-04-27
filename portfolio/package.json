@@ -10,10 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "core-js": "^3.41.0",
     "framer-motion": "^12.9.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-ga4": "^2.1.0",
+    "react-scripts": "^5.0.1",
     "recharts": "^2.15.1"
   },
   "devDependencies": {
