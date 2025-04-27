@@ -1,0 +1,53 @@
+{
+    "name": "Samuel Rivera Portfolio",
+    "short_name": "Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "../src/assets/icons/favicon-16x16.png",
+            "type": "image/png",
+            "sizes": "16x16"
+        },
+        {
+            "src": "../src/assets/icons/favicon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "../src/assets/icons/favicon-64x64.png",
+            "type": "image/png",
+            "sizes": "64x64"
+        },
+        {
+            "src": "../src/assets/icons/favicon-128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "../src/assets/icons/favicon-256x256.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        },
+        {
+            "src": "../src/assets/icons/favicon-512x512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/:path*",
+            "headers": [
+                {
+                    "key": "X-Frame-Options",
+                    "value": "DENY"
+                },
+                {
+                    "key": "X-Content-Type-Options",
+                    "value": "nosniff"
+                }
+            ]
+        }
+    ]
+}

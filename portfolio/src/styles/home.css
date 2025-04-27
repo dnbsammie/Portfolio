@@ -1,0 +1,89 @@
+/* ========= Home ========= */
+.home {
+    background-color: transparent;
+    color: var(--color-secondary);
+}
+
+.home .container {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding: min(2em, 4%) min(2em, 4%) min(4em, 8%);
+    justify-content: space-between;
+    background: var(--blur-1);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--color-secondary);
+    border-bottom: none;
+    width: 100%;
+    height: 95%;
+    text-align: left;
+}
+
+.hero-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70%;
+}
+
+.hero h1 {
+    letter-spacing: var(--ls-1);
+    line-height: 0.8;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(6) forwards;
+}
+
+.hero h5 {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s steps(21) forwards;
+}
+
+
+
+.home .cta {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.cta a.button {
+    font-size: var(--p-size);
+}
+
+@media(min-width: 810px) {
+    .hero {
+        width: 85%;
+    }
+}
+
+@media(min-width:980px) {
+    .hero {
+        width: 75%;
+        height: 90%;
+    }
+}
+
+@media(min-width: 1200px) {
+    .home .container {
+        flex-direction: row;
+    }
+
+    .hero {
+        width: 50%;
+    }
+}
+
+@media(min-width: 2000px) {
+    .hero {
+        width: 55%;
+        height: 70%;
+    }
+}

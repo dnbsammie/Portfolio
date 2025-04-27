@@ -1,0 +1,410 @@
+/* ==== Default Styles ===== */
+:root {
+    --font-main: "JetBrains Mono", monospace;
+    --h1-size: clamp(4rem, 15vh, 7.5rem);
+    --h2-size: clamp(3rem, 8vh, 6rem);
+    --h3-size: clamp(2rem, 4vh, 4rem);
+    --h4-size: clamp(1.8rem, 3vh, 3.6rem);
+    --h5-size: clamp(1.4rem, 1.5vh, 3.2rem);
+    --h6-size: clamp(1.2rem, 1.25vh, 2.8rem);
+    --p-size: clamp(1rem, 1.10vh, 2.4rem);
+    --a-size: clamp(1rem, 1vh, 2rem);
+    --d-gap: clamp(1rem, 2vh, 5rem);
+    --pad-1: min(77px, 2%);
+    --pad-2: min(77px, 2%) min(154px, 10%);
+    --pad-3: min(77px, 2%) min(308px, 20%);
+    --ls-1: clamp(4px, 1vw, 8px);
+    --ls-2: clamp(2px, 0.6vw, 4px);
+    --ls-3: clamp(1px, 0.3vw, 2px);
+    --color-primary: #f0f0f0;
+    --color-secondary: #0f0f0f;
+    --color-tertiary: #2d2d2d;
+    --color-accent: #fb854e;
+    --blur-1: rgba(240, 240, 240, 0.5);
+    --blur-2: rgba(251, 133, 78, 0.5);
+    --gradient-cd: linear-gradient(45deg, rgba(225, 225, 225, 0.25) 0%, rgba(250, 250, 250, 0.25) 100%);
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --ico-shadow: drop-shadow(1px 1px 1px rgba(10, 10, 10, 0.5));
+}
+
+[data-theme="dark"] {
+    --color-primary: #0f0f0f;
+    --color-secondary: #f0f0f0;
+    --color-tertiary: #d2d2d2;
+    --blur-1: rgba(15, 15, 15, 0.5);
+    --color-accent: #ff8b52;
+    --blur-2: rgba(255, 139, 82, 0.5);
+    --gradient-cd: linear-gradient(45deg, rgba(10, 10, 10, 0.25) 0%, rgba(30, 30, 30, 0.25) 100%);
+    --box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
+    --ico-shadow: drop-shadow(1px 1px 1px rgba(245, 245, 1245, 0.5));
+}
+
+/* Basic reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    color: var(--color-tertiary);
+    font-family: var(--font-main);
+    font-style: normal;
+    font-optical-sizing: auto;
+    transition: all 0.75s ease-in-out;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+::-webkit-scrollbar {
+    width: none;
+}
+
+/* ========= Text ========== */
+h1 {
+    font-size: var(--h1-size);
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+h2 {
+    font-size: var(--h2-size);
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+h3 {
+    font-size: var(--h3-size);
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+h4 {
+    font-size: var(--h4-size);
+    font-weight: 400;
+}
+
+h5 {
+    font-size: var(--h5-size);
+    font-weight: 300;
+}
+
+h6 {
+    font-size: var(--h6-size);
+    font-weight: 200;
+}
+
+p {
+    font-size: var(--p-size);
+    font-weight: 100;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: var(--a-size);
+    margin: auto;
+}
+
+/* ========== CTA ========== */
+a {
+    position: relative;
+    font-size: var(--a-size);
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:not(.button):not(.project-links a):not(.socials a)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+a:not(.button):not(.project-links a):not(.socials a):hover::after {
+    transform: scaleX(1);
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+a.button {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    padding: clamp(0.10rem, 0.5vw, 0.25rem) clamp(0.25rem, 1vw, 0.5rem);
+    width: min(250px, 45%);
+    height: fit-content;
+    font-size: var(--p-size);
+    letter-spacing: var(--ls-3);
+    border-radius: 50px;
+    border: 5px solid var(--color-secondary);
+    color: var(--color-secondary);
+    transition: all 0.3s ease-in-out;
+}
+
+a.line-button {
+    background-color: transparent;
+}
+
+a.fill-button {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+a.button:hover {
+    border: 5px solid var(--color-accent);
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+/* Icons config*/
+.socials {
+    display: flex;
+    height: fit-content;
+    line-height: 0.5;
+    width: fit-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.75rem, 3vw, 1rem);
+}
+
+.socials a,
+.socials a {
+    text-decoration: none;
+    font-size: var(--h6-size);
+    color: inherit;
+    transition: color .4s ease;
+}
+
+.socials a:hover,
+.socials a:hover {
+    text-decoration: none;
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* == Animated Background == */
+#waveCanvas {
+    display: block;
+    background: inherit;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    transition: all 0.75s ease-in-out;
+}
+
+/* ======= Graphics ======== */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    background: var(--color-secondary);
+}
+
+hr {
+    border: none;
+    height: 3px;
+    background-color: var(--color-secondary);
+    box-shadow: var(--box-shadow);
+    width: 100%;
+}
+
+/* ====== Content Row ====== */
+main {
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    min-height: -webkit-fill-available;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - min(10%, 76px));
+    height: 100%;
+    margin-left: min(10%, 76px);
+    padding: 0 min(77px, 5%);
+    max-width: 2560px;
+    gap: clamp(1rem, 2vw, 3rem);
+}
+
+.left,
+.right {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+}
+
+.bento-container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    border: 1px solid var(--color-secondary);
+    padding: min(2em, 2%);
+}
+
+.bento-container a {
+    width: fit-content;
+}
+
+.bento-container ul {
+    margin-top: min(2em, 2%);
+}
+
+.time-item {
+    flex: 1;
+    max-height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.time-item hr {
+    margin-bottom: min(2em, 4%);
+}
+
+.time-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.time-date {
+    width: 15%;
+    height: fit-content;
+}
+
+.time-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.topics {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+}
+
+.topic {
+    border: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    font-size: var(--p-size);
+    padding: min(0.25em, 1%) min(0.5em, 2%);
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+/* Change Lenguage*/
+.text-transition {
+    display: inline-block;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/* == Responsive Settings == */
+@media(min-width: 810px) {
+    a.button {
+        width: min(350px, 45%);
+    }
+
+    .home,
+    .about,
+    .education,
+    .contact {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .left,
+    .right {
+        height: 100%;
+        width: 50;
+    }
+}
+
+@media(min-width: 1200px) {
+    a.button {
+        width: min(450px, 45%);
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 min(154px, 10%);
+        margin-left: 0;
+    }
+}
+
+@media(min-width: 2000px) {
+    a.button {
+        width: min(550px, 45%);
+    }
+
+    .container {
+        padding: 0 min(308px, 15%);
+    }
+}
+
+/* ==== AnimatedEffects ==== */
+@keyframes typing {
+    from {
+        width: 0;
+
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
