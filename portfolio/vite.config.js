@@ -6,7 +6,7 @@ export default defineConfig({
   base: '/Portfolio/',
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: false,
     minify: 'terser',
     cssMinify: true
   }
