@@ -42,9 +42,9 @@ const HeaderMenu = () => {
         <>
             <header className="header">
                 <div className="sb logo">
-                    <a href="/" className="logo-link" onMouseOver={() => setLogoText("refresh")} onMouseOut={() => setLogoText("samuel")} aria-current="page">
-                        {logoText}
-                    </a>
+                    <a href="#" onClick={(e) => { e.preventDefault(); window.location.reload(); }}
+                        className="logo-link" onMouseOver={() => setLogoText("refresh")}
+                        onMouseOut={() => setLogoText("samuel")} aria-current="page">{logoText}</a>
                 </div>
                 <div className="sb section-name">
                     <a className="toggle" onClick={toggleMenu}>{menuOpen ? "index" : currentSection}</a>

@@ -3,7 +3,7 @@ import { ThemeProvider } from './context/ThemeSwitcher';
 import { LanguageProvider } from './context/LanguageContext';
 import Preloader from './components/Preloader';
 import Background from './components/Background'
-import HeaderMenu from './components/headerMenu';
+import HeaderMenu from './components/HeaderMenu';
 import Home from './layouts/Home';
 import About from './layouts/About';
 import Projects from './layouts/Projects';

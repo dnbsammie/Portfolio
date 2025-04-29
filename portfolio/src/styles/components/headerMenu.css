@@ -142,7 +142,7 @@ menu {
     left: -100%;
     width: calc(100vw - min(7%, 76px));
     height: 100vh;
-    padding: min(5em, 5%);
+    padding: var(--pad-1);
     background: var(--blur-1);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -241,7 +241,16 @@ nav a {
     color: var(--color-accent);
 }
 
-@media(min-width: 810px) {
+@media(min-width: 768px) {
+    .theme {
+        aspect-ratio: 2 / 1;
+    }
+
+    .box {
+        flex-direction: row;
+        aspect-ratio: 2 / 1;
+    }
+
     nav {
         height: 75%;
     }
@@ -252,13 +261,8 @@ nav a {
 }
 
 @media(min-width: 900px) {
-    .theme {
-        aspect-ratio: 2 / 1;
-    }
-
-    .box {
-        flex-direction: row;
-        aspect-ratio: 2 / 1;
+    nav a {
+        letter-spacing: var(--ls-1);
     }
 }
 

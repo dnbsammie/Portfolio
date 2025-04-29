@@ -3,13 +3,6 @@
   background-color: transparent;
 }
 
-.projects .block {
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--color-primary);
-  text-align: center;
-}
-
 .projects .container {
   flex-direction: column;
 }
@@ -135,7 +128,7 @@
   text-decoration: none;
 }
 
-@media(min-width: 810px) {
+@media(min-width: 768px) {
   .project {
     height: 90vh;
     width: 40vw;

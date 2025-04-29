@@ -1,6 +1,7 @@
 /* ==== Default Styles ===== */
 :root {
     --font-main: "JetBrains Mono", monospace;
+    /* Typography sizes */
     --h1-size: clamp(2rem, 7.5vh, 3.75rem);
     --h2-size: clamp(1.5rem, 4vh, 3rem);
     --h3-size: clamp(1rem, 2vh, 2rem);
@@ -9,17 +10,21 @@
     --h6-size: clamp(0.6rem, 0.625vh, 1.4rem);
     --p-size: clamp(0.5rem, 0.55vh, 1.2rem);
     --a-size: clamp(0.5rem, 0.5vh, 1rem);
+    /* Spacing */
     --d-gap: clamp(0.5rem, 1vh, 2.5rem);
-    --pad-1: min(77px, 2%);
-    --pad-2: min(77px, 2%) min(154px, 10%);
-    --pad-3: min(77px, 2%) min(308px, 20%);
+    --pad-1: min(77px, 5%);
+    --pad-2: min(77px, 5%) min(154px, 10%);
+    --pad-3: min(77px, 5%) min(308px, 20%);
+    /* Letter spacing */
     --ls-1: clamp(4px, 1vw, 8px);
     --ls-2: clamp(2px, 0.6vw, 4px);
     --ls-3: clamp(1px, 0.3vw, 2px);
+    /* Colors */
     --color-primary: #f0f0f0;
     --color-secondary: #0f0f0f;
     --color-tertiary: #2d2d2d;
     --color-accent: #fb854e;
+    /* Effects */
     --blur-1: rgba(240, 240, 240, 0.5);
     --blur-2: rgba(251, 133, 78, 0.5);
     --gradient-cd: linear-gradient(45deg, rgba(225, 225, 225, 0.25) 0%, rgba(250, 250, 250, 0.25) 100%);
@@ -36,7 +41,7 @@
     --blur-2: rgba(255, 139, 82, 0.5);
     --gradient-cd: linear-gradient(45deg, rgba(10, 10, 10, 0.25) 0%, rgba(30, 30, 30, 0.25) 100%);
     --box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
-    --ico-shadow: drop-shadow(1px 1px 1px rgba(245, 245, 1245, 0.5));
+    --ico-shadow: drop-shadow(1px 1px 1px rgba(245, 245, 245, 0.5));
 }
 
 /* Basic reset */
@@ -52,7 +57,10 @@
 html,
 body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    height: 100svh;
+    max-height: -webkit-fill-available;
+    max-height: stretch;
     background: var(--color-primary);
     color: var(--color-tertiary);
     font-family: var(--font-main);
@@ -60,11 +68,11 @@ body {
     font-optical-sizing: auto;
     transition: all 0.75s ease-in-out;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
 }
 
 ::-webkit-scrollbar {
-    width: none;
+    width: 0;
+    background: transparent;
 }
 
 /* ========= Text ========== */
@@ -116,6 +124,16 @@ li {
 }
 
 /* ========== CTA ========== */
+:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+:active {
+    transform: none;
+    box-shadow: none;
+}
+
 a {
     position: relative;
     font-size: var(--a-size);
@@ -123,23 +141,6 @@ a {
     cursor: pointer;
     text-decoration: none;
     transition: color 0.3s ease-in-out;
-}
-
-a:not(.button):not(.project-links a):not(.socials a)::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-accent);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease-in-out;
-}
-
-a:not(.button):not(.project-links a):not(.socials a):hover::after {
-    transform: scaleX(1);
 }
 
 a:hover {
@@ -151,12 +152,12 @@ a.button {
     cursor: pointer;
     text-decoration: none;
     text-align: center;
-    padding: clamp(0.10rem, 0.5vw, 0.25rem) clamp(0.25rem, 1vw, 0.5rem);
-    width: min(250px, 45%);
-    height: fit-content;
+    padding: min(1vh, 2%) min(3vw, 4%);
+    width: 100%;
+    height: min(150px, 48%);
     font-size: var(--p-size);
     letter-spacing: var(--ls-3);
-    border-radius: 50px;
+    border-radius: 10px;
     border: 5px solid var(--color-secondary);
     color: var(--color-secondary);
     transition: all 0.3s ease-in-out;
@@ -175,6 +176,23 @@ a.button:hover {
     border: 5px solid var(--color-accent);
     background-color: var(--color-accent);
     color: var(--color-primary);
+}
+
+a:not(.button):not(.project-links a):not(.socials a)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+a:not(.button):not(.project-links a):not(.socials a):hover::after {
+    transform: scaleX(1);
 }
 
 /* Icons config*/
@@ -244,7 +262,6 @@ main {
 section {
     height: 100vh;
     position: relative;
-    min-height: -webkit-fill-available;
 }
 
 .container {
@@ -275,7 +292,7 @@ section {
     justify-content: space-between;
     text-align: left;
     border: 1px solid var(--color-secondary);
-    padding: min(2em, 2%);
+    padding: var(--d-gap);
 }
 
 .bento-container a {
@@ -348,22 +365,7 @@ section {
 }
 
 /* == Responsive Settings == */
-@media(min-width: 810px) {
-    :root {
-        --h1-size: clamp(4rem, 15vh, 7.5rem);
-        --h2-size: clamp(3rem, 8vh, 6rem);
-        --h3-size: clamp(2rem, 4vh, 4rem);
-        --h4-size: clamp(1.8rem, 3vh, 3.6rem);
-        --h5-size: clamp(1.4rem, 1.5vh, 3.2rem);
-        --h6-size: clamp(1.2rem, 1.25vh, 2.8rem);
-        --p-size: clamp(1rem, 1.10vh, 2.4rem);
-        --a-size: clamp(1rem, 1vh, 2rem);
-        --d-gap: clamp(1rem, 2vh, 5rem);
-    }
-
-    a.button {
-        width: min(350px, 45%);
-    }
+@media(min-width: 768px) {
 
     .home,
     .about,
@@ -377,11 +379,33 @@ section {
     .left,
     .right {
         height: 100%;
-        width: 50;
+        width: 50%;
     }
 }
 
-@media(min-width: 1200px) {
+@media(min-width: 900px) {
+    a.button {
+        height: fit-content;
+        width: min(450px, 45%);
+    }
+}
+
+@media (min-width: 1280px) {
+    :root {
+        --h1-size: clamp(3rem, 10vw, 6rem);
+        --h2-size: clamp(2.5rem, 3.75vw, 3.75rem);
+        --h3-size: clamp(1.2rem, 2.5vw, 3rem);
+        --h4-size: clamp(1rem, 1.8vw, 2.25rem);
+        --h5-size: clamp(0.875rem, 1.5vw, 1.8rem);
+        --h6-size: clamp(0.75rem, 1.2vw, 1.6rem);
+        --p-size: clamp(0.75rem, 1vw, 1.4rem);
+        --a-size: clamp(0.75rem, 0.8vw, 1.2rem);
+        --ls-1: clamp(4px, 0.75vw, 10px);
+        --ls-2: clamp(2px, 0.5vw, 6px);
+        --ls-3: clamp(1px, 0.25vw, 3px);
+        --d-gap: clamp(0.75rem, 2vw, 4rem);
+    }
+
     a.button {
         width: min(450px, 45%);
     }
@@ -400,6 +424,12 @@ section {
 
     .container {
         padding: 0 min(308px, 15%);
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: -webkit-fill-available;
     }
 }
 

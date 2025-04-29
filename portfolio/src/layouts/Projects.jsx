@@ -1,7 +1,12 @@
 import { useEffect } from "react";
 import { useLanguage } from "../context/LanguageContext";
-import { VideoModal, VideoTrigger } from "../components/VideoModal";
+import { VideoTrigger } from "../components/VideoModal";
+import project1 from "../assets/images/project-1.webp";
+import project2 from "../assets/images/project-2.webp";
+import project3 from "../assets/images/project-3.webp";
+import project4 from "../assets/images/project-4.webp";
 import "../styles/projects.css";
+
 
 const Projects = () => {
     const { translations, isTransitioning } = useLanguage();
@@ -28,7 +33,7 @@ const Projects = () => {
                 <div className="scroll_section">
                     {/* JAVA */}
                     <div className="project">
-                        <img src="images/project-1.webp" itemType="image" alt="Image 1" loading="lazy" />
+                        <img src={project1} itemType="image" alt="Image 1" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
                                 <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn1}</h4>
@@ -48,7 +53,7 @@ const Projects = () => {
                         </div>
                     </div>
                     <div className="project">
-                        <img src="images/project-2.webp" itemType="image" alt="Image 2" loading="lazy" />
+                        <img src={project2} itemType="image" alt="Image 2" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
                                 <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn2}</h4>
@@ -69,7 +74,7 @@ const Projects = () => {
                     </div>
                     {/* C++ */}
                     <div className="project">
-                        <img src="images/project-3.webp" itemType="image" alt="Image 3" loading="lazy" />
+                        <img src={project3} itemType="image" alt="Image 3" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
                                 <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn3}</h4>
@@ -89,7 +94,7 @@ const Projects = () => {
                     </div>
                     {/* C#*/}
                     <div className="project">
-                        <img src="images/project-4.webp" itemType="image" alt="Image 4" loading="lazy" />
+                        <img src={project4} itemType="image" alt="Image 4" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
                                 <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn4}</h4>
