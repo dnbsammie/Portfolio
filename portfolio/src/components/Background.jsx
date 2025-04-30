@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import "../styles/global.css";
 
 function Background() {
   const canvasRef = useRef(null);
@@ -8,7 +9,9 @@ function Background() {
 
   useEffect(() => {
     const handleThemeChange = () => {
-      setIsDarkMode(document.documentElement.getAttribute("data-theme") === "dark");
+      setIsDarkMode(
+        document.documentElement.getAttribute("data-theme") === "dark"
+      );
     };
 
     window.addEventListener("themeChanged", handleThemeChange);
@@ -30,9 +33,11 @@ function Background() {
     let offset = 0.1;
 
     function resizeCanvas() {
-      canvas.width = window.innerWidth * dpr;
-      canvas.height = window.innerHeight * dpr;
-      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transform
+      const width = document.documentElement.clientWidth;
+      const height = document.documentElement.clientHeight;
+      canvas.width = width * dpr;
+      canvas.height = height * dpr;
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     }
 
@@ -40,11 +45,10 @@ function Background() {
       isAnimating = document.visibilityState === "visible";
     };
 
-    const getColors = (isDark) => {
-      return isDark
+    const getColors = (isDark) =>
+      isDark
         ? ["#ff9e70", "#ff8b52", "#fb854e"]
         : ["#ee7a44", "#e07039", "#d0623a"];
-    };
 
     const createGradient = (colors) => {
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
@@ -59,9 +63,12 @@ function Background() {
       }
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const maxSpacing = window.innerHeight * 0.05;
-      const minSpacing = window.innerHeight * 0.025;
-      const spacing = minSpacing + (maxSpacing - minSpacing) * (0.5 + 0.5 * Math.sin(offset));
+      const height = canvas.height / dpr;
+      const maxSpacing = height * 0.05;
+      const minSpacing = height * 0.025;
+      const spacing =
+        minSpacing +
+        (maxSpacing - minSpacing) * (0.5 + 0.5 * Math.sin(offset));
       const centerY = canvas.height / 2;
       const colors = getColors(isDarkMode);
       ctx.strokeStyle = createGradient(colors);
@@ -70,7 +77,10 @@ function Background() {
         const progress = i / (lineCount - 1);
         const baseY = centerY + (i - lineCount / 2) * spacing;
         const delay = i * 0.15;
-        const waveHeight = Math.sin(offset - delay) * waveAmplitude;
+        const waveHeight =
+          Math.sin(offset - delay) *
+          waveAmplitude *
+          (1 - Math.abs(progress - 0.5));
 
         ctx.beginPath();
         for (let x = 0; x <= canvas.width; x += step) {

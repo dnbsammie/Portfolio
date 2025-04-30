@@ -9,20 +9,22 @@
     --h5-size: clamp(0.7rem, 0.75vh, 1.6rem);
     --h6-size: clamp(0.6rem, 0.625vh, 1.4rem);
     --p-size: clamp(0.5rem, 0.55vh, 1.2rem);
-    --a-size: clamp(0.5rem, 0.5vh, 1rem);
+    --a-size: clamp(0.7rem, 0.5vh, 1rem);
     /* Spacing */
-    --d-gap: clamp(0.5rem, 1vh, 2.5rem);
-    --pad-1: min(77px, 5%);
-    --pad-2: min(77px, 5%) min(154px, 10%);
-    --pad-3: min(77px, 5%) min(308px, 20%);
+    --gap-1: clamp(0.5rem, 1vh, 2.5rem);
+    --gap-2: clamp(0.25rem, 0.5vh, 1.25rem);
+    --pad-1: min(5%, 40px);
+    --pad-2: min(10%, 80px);
+    --pad-3: min(15%, 120px);
+    --pad-4: min(20%, 160px);
     /* Letter spacing */
     --ls-1: clamp(4px, 1vw, 8px);
     --ls-2: clamp(2px, 0.6vw, 4px);
     --ls-3: clamp(1px, 0.3vw, 2px);
     /* Colors */
-    --color-primary: #f0f0f0;
+    --color-primary: #e1e1e1;
     --color-secondary: #0f0f0f;
-    --color-tertiary: #2d2d2d;
+    --color-tertiary: #1e1e1e;
     --color-accent: #fb854e;
     /* Effects */
     --blur-1: rgba(240, 240, 240, 0.5);
@@ -57,8 +59,8 @@
 html,
 body {
     width: 100%;
-    height: 100vh;
-    height: 100svh;
+    height: 100lvh;
+    max-height: 100dvh;
     max-height: -webkit-fill-available;
     max-height: stretch;
     background: var(--color-primary);
@@ -210,7 +212,7 @@ a:not(.button):not(.project-links a):not(.socials a):hover::after {
 .socials a,
 .socials a {
     text-decoration: none;
-    font-size: var(--h6-size);
+    font-size: var(--h5-size);
     color: inherit;
     transition: color .4s ease;
 }
@@ -232,7 +234,7 @@ a:not(.button):not(.project-links a):not(.socials a):hover::after {
     bottom: 0;
     right: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 0;
     transition: all 0.75s ease-in-out;
 }
@@ -256,7 +258,8 @@ hr {
 /* ====== Content Row ====== */
 main {
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    /* height: calc(var(--vh, 1vh) * 100); */
 }
 
 section {
@@ -268,12 +271,11 @@ section {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: calc(100% - min(10%, 76px));
+    width: calc(100% - min(10%, 80px));
     height: 100%;
-    margin-left: min(10%, 76px);
-    padding: 0 min(77px, 5%);
+    margin-left: min(10%, 80px);
+    padding: 0 var(--pad-1);
     max-width: 2560px;
-    gap: clamp(1rem, 2vw, 3rem);
 }
 
 .left,
@@ -292,7 +294,7 @@ section {
     justify-content: space-between;
     text-align: left;
     border: 1px solid var(--color-secondary);
-    padding: var(--d-gap);
+    padding: var(--pad-1);
 }
 
 .bento-container a {
@@ -365,7 +367,17 @@ section {
 }
 
 /* == Responsive Settings == */
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        height: -webkit-fill-available;
+    }
+}
+
 @media(min-width: 768px) {
+    .container {
+        padding: 0 var(--pad-2);
+    }
 
     .home,
     .about,
@@ -388,11 +400,15 @@ section {
         height: fit-content;
         width: min(450px, 45%);
     }
+
+    .container {
+        padding: 0 var(--pad-3);
+    }
 }
 
 @media (min-width: 1280px) {
     :root {
-        --h1-size: clamp(3rem, 10vw, 6rem);
+        --h1-size: clamp(4rem, 12vw, 7rem);
         --h2-size: clamp(2.5rem, 3.75vw, 3.75rem);
         --h3-size: clamp(1.2rem, 2.5vw, 3rem);
         --h4-size: clamp(1rem, 1.8vw, 2.25rem);
@@ -403,7 +419,6 @@ section {
         --ls-1: clamp(4px, 0.75vw, 10px);
         --ls-2: clamp(2px, 0.5vw, 6px);
         --ls-3: clamp(1px, 0.25vw, 3px);
-        --d-gap: clamp(0.75rem, 2vw, 4rem);
     }
 
     a.button {
@@ -412,24 +427,8 @@ section {
 
     .container {
         width: 100%;
-        padding: 0 min(154px, 10%);
+        padding: 0 var(--pad-4);
         margin-left: 0;
-    }
-}
-
-@media(min-width: 2000px) {
-    a.button {
-        width: min(550px, 45%);
-    }
-
-    .container {
-        padding: 0 min(308px, 15%);
-    }
-}
-
-@supports (-webkit-touch-callout: none) {
-    body {
-        height: -webkit-fill-available;
     }
 }
 

@@ -1,8 +1,9 @@
 {
     "name": "Samuel Rivera Portfolio",
     "short_name": "Portfolio",
-    "start_url": "/",
+    "start_url": "/Portfolio/",
     "display": "standalone",
+    "orientation": "portrait",
     "icons": [
         {
             "src": "../src/assets/icons/favicon-16x16.png",

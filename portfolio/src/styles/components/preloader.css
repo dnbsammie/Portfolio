@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: var(--color-accent);
+  background: var(--color-primary);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -24,14 +24,14 @@
 .counter {
   font-size: clamp(3rem, 10vw, 8rem);
   font-weight: bold;
-  color: var(--color-secondary);
+  color: var(--color-tertiary);
   transition: color 0.5s ease, transform 0.3s ease, opacity 0.5s ease;
   animation: pulse 2s infinite;
   opacity: 1;
 }
 
 .counter.complete {
-  color: var(--color-primary);
+  color: var(--color-accent);
   animation: scaleUpAndFade 0.8s forwards;
 }
 

@@ -7,11 +7,11 @@
 .education .container {
     flex-direction: column;
     padding: var(--pad-1);
-    gap: var(--d-gap);
+    gap: var(--pad-1);
 }
 
 .education .right {
-    gap: var(--d-gap);
+    gap: var(--pad-1);
 }
 
 .education .bento-container {
@@ -25,22 +25,14 @@
 }
 
 /* == Responsive Settings == */
-@media(min-width: 810px) {
-    .education {
-        align-items: center;
-        justify-content: center;
-    }
-
+@media(min-width: 768px) {
     .education .container {
-        flex-direction: row;
-        padding: var(--pad-1);
+        padding: var(--pad-1) var(--pad-2);
     }
 }
 
-@media(min-width: 1200px) {
+@media(min-width:900px) {
     .education .container {
-        width: 100%;
-        padding: var(--pad-2);
-        margin-left: 0;
+        flex-direction: row;
     }
 }

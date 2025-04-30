@@ -30,11 +30,9 @@ const Contact = () => {
                     </div>
                 </div>
                 <footer aria-labelledby="footer">
-                    <div className="f-cont">
-                        <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.p1}</h4>
-                        <h6>{t.p2}</h6>
-                        <a href="mailto:seriveramosq@gmail.com" className="email" aria-label="email">seriveramosq@gmail.com</a>
-                    </div>
+                    <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.p1}</h3>
+                    <h4>{t.p2}</h4>
+                    <a href="mailto:seriveramosq@gmail.com" className="email" aria-label="email">seriveramosq@gmail.com</a>
                     <div className="f-cont">
                         <div className="socials">
                             <a href="https://www.linkedin.com/in/seriveramosq" className="fa-brands fa-linkedin-in" target="_blank" aria-label="linkedin" ></a>

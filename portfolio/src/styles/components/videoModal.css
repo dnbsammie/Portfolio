@@ -47,7 +47,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  gap: var(--d-gap);
+  gap: var(--gap-2);
   aspect-ratio: 16/9;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -85,8 +85,8 @@ iframe {
   border: 6px solid var(--color-tertiary);
   border-top: 6px solid var(--color-secondary);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   animation: spin 1s linear infinite;
   margin-bottom: 1rem;
 }
