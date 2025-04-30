@@ -22,15 +22,15 @@
     --ls-2: clamp(2px, 0.6vw, 4px);
     --ls-3: clamp(1px, 0.3vw, 2px);
     /* Colors */
-    --color-primary: #f0f0f0;
+    --color-primary: #ff8b52;
     --color-secondary: #0f0f0f;
     --color-tertiary: #1e1e1e;
-    --color-quaternary: #e1e1e1;
-    --color-accent: #fb854e;
+    --color-quaternary: #bc5733;
+    --color-accent: #e1e1e1;
     /* Effects */
-    --blur-1: rgba(240, 240, 240, 0.5);
-    --blur-2: rgba(251, 133, 78, 0.5);
-    --gradient-cd: linear-gradient(45deg, rgba(225, 225, 225, 0.25) 0%, rgba(250, 250, 250, 0.25) 100%);
+    --blur-1: rgba(255, 139, 82, 0.5);
+    --blur-2: rgba(225, 225, 225, 0.5);
+    --gradient-cd: linear-gradient(45deg, rgba(208, 98, 58, 0.25) 0%, rgba(255, 179, 145, 0.25) 100%);
     --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     --ico-shadow: drop-shadow(1px 1px 1px rgba(10, 10, 10, 0.5));
 }
@@ -40,8 +40,8 @@
     --color-secondary: #f0f0f0;
     --color-tertiary: #d2d2d2;
     --color-quarternary: #1e1e1e;
-    --blur-1: rgba(15, 15, 15, 0.5);
     --color-accent: #ff8b52;
+    --blur-1: rgba(15, 15, 15, 0.5);
     --blur-2: rgba(255, 139, 82, 0.5);
     --gradient-cd: linear-gradient(45deg, rgba(10, 10, 10, 0.25) 0%, rgba(30, 30, 30, 0.25) 100%);
     --box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2);
