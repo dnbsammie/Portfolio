@@ -3,10 +3,10 @@ function RadialChart() {
 
     const skills = [
         { name: "C++", value: 65 },
-        { name: "C#", value: 75 },
+        { name: "C#", value: 70 },
         { name: "HTML", value: 80 },
-        { name: "JavaScript", value: 28 },
-        { name: "CSS", value: 80 },
+        { name: "JavaScript", value: 25 },
+        { name: "CSS", value: 85 },
         { name: "Java", value: 90 }
     ];
 

@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/components/preloader.css';
 
 const Preloader = ({ onLoadComplete }) => {
-    const [progress, setProgress] = useState(0);
-    const [isLoading, setIsLoading] = useState(true);
+    const [startExit, setStartExit] = useState(false);
+    const loadingText = 'SAMUEL RIVERA';
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -18,36 +18,35 @@ const Preloader = ({ onLoadComplete }) => {
             });
         };
 
-        const startLoading = async () => {
+        const animateLoading = async () => {
             await checkAssetsLoaded();
 
-            const interval = setInterval(() => {
-                setProgress(prev => {
-                    if (prev >= 100) {
-                        clearInterval(interval);
-                        setIsLoading(false);
-                        document.querySelector('.preloader').addEventListener('transitionend', () => {
-                            onLoadComplete();
-                        });
-
-                        return 100;
-                    }
-                    return prev + 1;
-                });
-            }, 30);
+            setTimeout(() => {
+                setStartExit(true);
+            }, 2800);
         };
 
-        startLoading();
+        animateLoading();
+    }, []);
 
-        return () => {
-        };
-    }, [onLoadComplete]);
+    useEffect(() => {
+        if (startExit) {
+            const el = document.querySelector('.preloader');
+            el.addEventListener('transitionend', () => {
+                onLoadComplete();
+            }, { once: true });
+        }
+    }, [startExit, onLoadComplete]);
 
     return (
-        <div className={`preloader ${!isLoading ? 'loaded' : ''}`}>
-            <span className={`counter ${progress >= 100 ? 'complete' : ''}`}>
-                {progress}%
-            </span>
+        <div className={`preloader ${startExit ? 'loaded' : ''}`}>
+            <div className="loading-text">
+                {loadingText.split('').map((char, index) => (
+                    <span key={index} style={{ animationDelay: `${index * 0.2}s` }}>
+                        {char}
+                    </span>
+                ))}
+            </div>
         </div>
     );
 };

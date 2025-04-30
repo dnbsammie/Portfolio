@@ -34,5 +34,12 @@
 @media(min-width:900px) {
     .education .container {
         flex-direction: row;
+        padding: var(--pad-1) var(--pad-3);
+    }
+}
+
+@media (min-width: 1280px) {
+    .education .container {
+        padding: var(--pad-1) var(--pad-4);
     }
 }

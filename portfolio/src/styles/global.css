@@ -22,9 +22,10 @@
     --ls-2: clamp(2px, 0.6vw, 4px);
     --ls-3: clamp(1px, 0.3vw, 2px);
     /* Colors */
-    --color-primary: #e1e1e1;
+    --color-primary: #f0f0f0;
     --color-secondary: #0f0f0f;
     --color-tertiary: #1e1e1e;
+    --color-quaternary: #e1e1e1;
     --color-accent: #fb854e;
     /* Effects */
     --blur-1: rgba(240, 240, 240, 0.5);
@@ -38,6 +39,7 @@
     --color-primary: #0f0f0f;
     --color-secondary: #f0f0f0;
     --color-tertiary: #d2d2d2;
+    --color-quarternary: #1e1e1e;
     --blur-1: rgba(15, 15, 15, 0.5);
     --color-accent: #ff8b52;
     --blur-2: rgba(255, 139, 82, 0.5);
@@ -147,6 +149,7 @@ a {
 
 a:hover {
     color: var(--color-accent);
+    /* transform: translateX(1ch); */
 }
 
 a.button {
@@ -212,7 +215,7 @@ a:not(.button):not(.project-links a):not(.socials a):hover::after {
 .socials a,
 .socials a {
     text-decoration: none;
-    font-size: var(--h5-size);
+    font-size: var(--h6-size);
     color: inherit;
     transition: color .4s ease;
 }
@@ -235,8 +238,10 @@ a:not(.button):not(.project-links a):not(.socials a):hover::after {
     right: 0;
     width: 100%;
     height: 100vh;
+    height: 100dvh;
     z-index: 0;
     transition: all 0.75s ease-in-out;
+    pointer-events: none;
 }
 
 /* ======= Graphics ======== */
@@ -294,7 +299,7 @@ section {
     justify-content: space-between;
     text-align: left;
     border: 1px solid var(--color-secondary);
-    padding: var(--pad-1);
+    padding: min(2.5%, 20px);
 }
 
 .bento-container a {
@@ -377,6 +382,7 @@ section {
 @media(min-width: 768px) {
     .container {
         padding: 0 var(--pad-2);
+        margin-left: 0;
     }
 
     .home,
@@ -408,7 +414,7 @@ section {
 
 @media (min-width: 1280px) {
     :root {
-        --h1-size: clamp(4rem, 12vw, 7rem);
+        --h1-size: clamp(4rem, 10vw, 6rem);
         --h2-size: clamp(2.5rem, 3.75vw, 3.75rem);
         --h3-size: clamp(1.2rem, 2.5vw, 3rem);
         --h4-size: clamp(1rem, 1.8vw, 2.25rem);
@@ -428,7 +434,6 @@ section {
     .container {
         width: 100%;
         padding: 0 var(--pad-4);
-        margin-left: 0;
     }
 }
 

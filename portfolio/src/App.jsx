@@ -24,8 +24,8 @@ function App() {
         <Preloader onLoadComplete={handleLoadComplete} />
         <Background />
         <LanguageProvider>
-          <HeaderMenu />
           <main style={{ opacity: isLoading ? 0 : 1, transition: 'opacity 0.5s ease' }}>
+            <HeaderMenu />
             <Home />
             <About />
             <Projects />

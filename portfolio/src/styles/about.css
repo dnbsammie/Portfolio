@@ -86,6 +86,10 @@
 }
 
 @media(min-width:900px) {
+    .about .container {
+        padding: var(--pad-1) var(--pad-4);
+    }
+
     .about-bot {
         flex-direction: row;
     }
@@ -93,6 +97,10 @@
 
 @media(min-width: 1280px) {
     .about .container {
-        padding: var(--pad-2) var(--pad-4);
+        padding: var(--pad-1) var(--pad-4);
+    }
+
+    .radial-chart {
+        max-height: 300px;
     }
 }

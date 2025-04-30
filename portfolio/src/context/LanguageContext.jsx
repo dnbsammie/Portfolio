@@ -8,10 +8,10 @@ export const useLanguage = () => useContext(LanguageContext);
 
 const getInitialLanguage = () => {
     const storedLang = localStorage.getItem("lang");
-    const urlLang = window.location.pathname.replace("/", "").toLowerCase();
+    const pathLang = window.location.pathname.split("/")[2]?.toLowerCase();
 
     if (storedLang) return storedLang;
-    if (urlLang === "es" || urlLang === "en") return urlLang;
+    if (pathLang === "es" || pathLang === "en") return pathLang;
 
     return navigator.language.startsWith("es") ? "es" : "en";
 };
@@ -24,7 +24,16 @@ export const LanguageProvider = ({ children }) => {
     useEffect(() => {
         setTranslations(language === "es" ? es : en);
         document.documentElement.lang = language;
-        window.history.replaceState(null, "", `/${language}`);
+
+        const pathParts = window.location.pathname.split("/").filter(Boolean);
+        const base = pathParts[0];
+        const langInPath = pathParts[1];
+
+        if (langInPath !== language) {
+            const remainingPath = pathParts.slice(2).join("/");
+            const newPath = `/${base}/${language}/${remainingPath}`;
+            window.history.replaceState(null, "", newPath);
+        }
     }, [language]);
 
     const toggleLanguage = useCallback((lang) => {
@@ -39,7 +48,9 @@ export const LanguageProvider = ({ children }) => {
     }, [language]);
 
     return (
-        <LanguageContext.Provider value={{ language, translations, toggleLanguage, isTransitioning }}>
+        <LanguageContext.Provider
+            value={{ language, translations, toggleLanguage, isTransitioning }}
+        >
             {children}
         </LanguageContext.Provider>
     );

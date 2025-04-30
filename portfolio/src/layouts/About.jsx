@@ -17,13 +17,13 @@ const About = () => {
                 </div>
                 <div className="about-bot">
                     <div className="bento-container">
-                        <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.radial}</h5>
+                        <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.radial}</h3>
                         <RadialChart />
                         <p className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>
                             <a href="https://maven.apache.org/" target="_blank">MAVEN</a> | <a href="https://gradle.org/" target="_blank">GRADLE</a> | <a href="https://kotlinfoundation.org/" target="_blank">KOTLIN</a> | <a href="https://react.dev/" target="_blank">REACT</a> | <a href="https://juce.com/" target="_blank">JUCE</a></p>
                     </div>
                     <div className="bento-container">
-                        <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.experience}</h5>
+                        <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.experience}</h3>
                         <article className="time-item">
                             <hr />
                             <div className="time-top">

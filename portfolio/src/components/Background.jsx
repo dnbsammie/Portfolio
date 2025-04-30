@@ -30,13 +30,16 @@ function Background() {
     const waveFrequency = 0.005;
     const speed = 0.015;
     const step = 4;
-    let offset = 0.1;
+    let offset = 0.5;
 
     function resizeCanvas() {
-      const width = document.documentElement.clientWidth;
-      const height = document.documentElement.clientHeight;
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const dpr = window.devicePixelRatio || 1;
+
       canvas.width = width * dpr;
       canvas.height = height * dpr;
+
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
     }
