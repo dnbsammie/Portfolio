@@ -29,7 +29,7 @@
     <ul>
       <li><strong>Palette 1:</strong><a href="https://colorswall.com/palette/511287"> Progressive Black Shades</a></li>
       <li><strong>Palette 2:</strong><a href="https://colorswall.com/palette/511284"> Progressive White Shades</a></li>
-      <li><strong>Palette 3:</strong><a href="https://colorswall.com/palette/531407"> Terracotta Orange Variations</a></li>
+      <li><strong>Palette 3:</strong><a href="https://colorswall.com/palette/544444"> Solar Flare Variations</a></li>
     </ul>
     <li>Fonts:</li>
     <ul>

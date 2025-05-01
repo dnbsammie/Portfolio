@@ -18,11 +18,11 @@
     --ls-1: clamp(4px, 1vw, 8px);
     --ls-2: clamp(2px, 0.6vw, 4px);
     --ls-3: clamp(1px, 0.3vw, 2px);
-    --color-primary: #ff914d;
+    --color-primary: #ffa766;
     --color-secondary: #141414;
     --color-tertiary: #1e1e1e;
     --color-accent: #e1e1e1;
-    --blur-1: rgba(255, 139, 82, 0.5);
+    --blur-1: rgba(255, 167, 102, 0.5);
     --blur-2: rgba(15, 15, 15, 0.5);
     --box-shadow: 0 2px 4px rgba(255, 145, 77, 0.2);
     --ico-shadow: drop-shadow(1px 1px 1px rgba(10, 10, 10, 0.5));
@@ -31,7 +31,7 @@
 [data-theme="dark"] {
     --color-primary: #0f0f0f;
     --color-secondary: #ff914d;
-    --color-tertiary: #ffa766;
+    --color-tertiary: #ff914d;
     --color-accent: #e1e1e1;
     --blur-1: rgba(15, 15, 15, 0.5);
     --blur-2: rgba(255, 139, 82, 0.5);
@@ -228,7 +228,6 @@ a:not(.button):not(.project-links a):not(.socials a):hover::after {
     width: 100%;
     height: 100svh;
     z-index: 0;
-    transition: all 0.75s ease-in-out;
     pointer-events: none;
 }
 
@@ -342,7 +341,7 @@ section {
 }
 
 .time-item hr {
-    margin-bottom: min(2em, 4%);
+    margin-bottom: 1vh;
 }
 
 .time-top {
@@ -360,6 +359,10 @@ section {
     width: 80%;
     display: flex;
     flex-direction: column;
+}
+
+.time-info a {
+    font-size: var(--h6-size);
 }
 
 .topics {

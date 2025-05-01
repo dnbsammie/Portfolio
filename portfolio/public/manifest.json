@@ -1,54 +1,39 @@
 {
-    "name": "Samuel Rivera Portfolio",
+    "name": "Portfolio",
     "short_name": "Portfolio",
     "start_url": "/Portfolio/",
     "display": "standalone",
     "orientation": "portrait",
     "icons": [
         {
-            "src": "public/icons/favicon-16x16.png",
-            "type": "image/png",
-            "sizes": "16x16"
+            "src": "/Portfolio/icons/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
         },
         {
-            "src": "public/icons/favicon-32x32.png",
-            "type": "image/png",
-            "sizes": "32x32"
+            "src": "/Portfolio/icons/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
         },
         {
-            "src": "public/icons/favicon-64x64.png",
-            "type": "image/png",
-            "sizes": "64x64"
+            "src": "/Portfolio/icons/favicon-64x64.png",
+            "sizes": "64x64",
+            "type": "image/png"
         },
         {
-            "src": "public/icons/favicon-128x128.png",
-            "type": "image/png",
-            "sizes": "128x128"
+            "src": "/Portfolio/icons/favicon-128x128.png",
+            "sizes": "128x128",
+            "type": "image/png"
         },
         {
-            "src": "public/icons/favicon-256x256.png",
-            "type": "image/png",
-            "sizes": "256x256"
+            "src": "/Portfolio/icons/favicon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
         },
         {
-            "src": "public/icons/favicon-512x512.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-    ],
-    "headers": [
-        {
-            "source": "/:path*",
-            "headers": [
-                {
-                    "key": "X-Frame-Options",
-                    "value": "DENY"
-                },
-                {
-                    "key": "X-Content-Type-Options",
-                    "value": "nosniff"
-                }
-            ]
+            "src": "/Portfolio/icons/favicon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ]
 }
