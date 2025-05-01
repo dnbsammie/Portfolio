@@ -20,8 +20,8 @@ async function main() {
         });
         if (!isKnownRoute) {
             document.head.innerHTML += '<link rel="stylesheet" href="./404.css">';
-            document.body.innerHTML = '<div class="error-container"><h1 class="error-title">404</h1><p class="error-message">Página no encontrada</p><a class="error-link" href="${basePath}/">Volver al inicio</a></div>';
-            document.title = '404 - Página no encontrada';
+            document.body.innerHTML = '<div class="error-container"><h1 class="error-title">404</h1><p class="error-message">Página not found</p><a class="error-link" href="${basePath}/">Return Home</a></div>';
+            document.title = '404 - Página not found';
         }
     })();
 </script>

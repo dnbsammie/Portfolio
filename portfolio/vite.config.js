@@ -22,8 +22,6 @@ export default defineConfig({
         start_url: '/Portfolio/',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#ffffff',
-        theme_color: '#000000',
         icons: [
           {
             src: '/Portfolio/icons/favicon-16x16.png',
@@ -64,6 +62,7 @@ export default defineConfig({
   ],
   build: {
     outDir: 'dist',
+    assetsDir: '',
     sourcemap: false,
     minify: 'terser',
     cssMinify: true
