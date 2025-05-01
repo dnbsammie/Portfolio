@@ -8,7 +8,7 @@ const HeaderMenu = () => {
     const { toggleTheme } = useTheme();
     const [currentSection, setCurrentSection] = useState("home");
     const [logoText, setLogoText] = useState("samuel");
-    const { toggleLanguage, translations, isTransitioning, language } = useLanguage();
+    const { changeLanguage, translations, isTransitioning, language } = useLanguage();
     const t = translations.header;
 
     useEffect(() => {
@@ -42,7 +42,7 @@ const HeaderMenu = () => {
         <>
             <header className="header">
                 <div className="sb logo">
-                    <a href="#" onClick={(e) => { e.preventDefault(); window.location.reload(); }}
+                    <a href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
                         className="logo-link" onMouseOver={() => setLogoText("refresh")}
                         onMouseOut={() => setLogoText("samuel")} aria-current="page">{logoText}</a>
                 </div>
@@ -63,10 +63,10 @@ const HeaderMenu = () => {
                     </div>
                     <div className="box">
                         <div className="sb half">
-                            <a className={`language ${language === "en" ? "active" : ""}`} onClick={() => toggleLanguage("en")}>EN</a>
+                            <a className={`language ${language === "en" ? "active" : ""}`} onClick={() => changeLanguage("en")}>EN</a>
                         </div>
                         <div className="sb half">
-                            <a className={`language ${language === "es" ? "active" : ""}`} onClick={() => toggleLanguage("es")}>ES</a>
+                            <a className={`language ${language === "es" ? "active" : ""}`} onClick={() => changeLanguage("es")}>ES</a>
                         </div>
                     </div>
                 </div>

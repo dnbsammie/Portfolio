@@ -24,10 +24,10 @@ header {
     border-radius: 0;
     color: var(--color-secondary);
     border: 1px solid var(--color-secondary);
-    background: transparent;
+    background: var(--blur-1);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .sb a {
@@ -38,17 +38,17 @@ header {
     align-items: center;
     text-decoration: none;
     color: inherit;
-    transition: background-color 0.3s, color 0.3s ease-in-out;
+    transition: background-color 0.2s, color 0.2s ease-in-out;
 }
 
 .sb:hover {
-    text-decoration: none;
-    border: 1px solid var(--color-accent);
-    background-color: var(--color-accent);
+    border: 1px solid var(--color-secondary);
+    background-color: var(--color-secondary);
+    color: var(--color-accent);
 }
 
 .sb a:hover {
-    color: var(--color-primary);
+    color: var(--text-tertiary);
 }
 
 .sb a::after {
@@ -146,7 +146,7 @@ menu {
     background: var(--blur-1);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-    color: var(--color-secondary);
+    color: var(--secondary-color);
     z-index: 999;
     opacity: 0;
     transition: left 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -216,7 +216,6 @@ nav {
 }
 
 nav a {
-    color: var(--color-secondary);
     font-size: var(--h2-size);
     letter-spacing: var(--ls-3);
     font-weight: bolder;
@@ -256,13 +255,13 @@ nav a {
     }
 
     nav a {
-        letter-spacing: var(--ls-2);
+        letter-spacing: var(--ls-3);
     }
 }
 
 @media(min-width: 900px) {
     nav a {
-        letter-spacing: var(--ls-1);
+        letter-spacing: var(--ls-2);
     }
 }
 

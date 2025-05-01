@@ -11,9 +11,9 @@ const About = () => {
         <section className="about" id="about" aria-labelledby="about-section">
             <div className="container">
                 <div className="about-top" aria-labelledby="about-top">
-                    <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.title}</h3>
-                    <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.subtitle}</h5>
-                    <h6 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.description}</h6>
+                    <h2 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.title}</h2>
+                    <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.subtitle}</h4>
+                    <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.description}</h5>
                 </div>
                 <div className="about-bot">
                     <div className="bento-container">
@@ -31,7 +31,7 @@ const About = () => {
                                     <p className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} aria-label="">2024 - 2025</p>
                                 </div>
                                 <div className="time-info">
-                                    <h6 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.role1}</h6>
+                                    <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.role1}</h4>
                                     <a href="" className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} target="_blank">Arte & Marqueteria.</a>
                                 </div>
                             </div>

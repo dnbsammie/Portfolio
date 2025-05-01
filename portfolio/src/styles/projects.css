@@ -31,20 +31,19 @@
   height: 80vh;
   margin: 0 15vw;
   border-radius: 10px;
-  background-color: transparent;
+  box-shadow: var(--box-shadow);
+  background: var(--blur-1);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  background-image: var(--gradient-cd);
-  box-shadow: var(--box-shadow);
   color: var(--color-secondary);
-  overflow: hidden;
-  transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
 }
 
 .project:hover {
-  background-color: var(--color-accent);
+  background-color: var(--color-secondary);
   color: var(--color-primary);
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
@@ -52,10 +51,13 @@
   transform: scale(1.05);
 }
 
-.project:hover .topic {
-  border: 1px solid var(--color-primary);
+.project:hover h3 {
   color: var(--color-primary);
-  transition: all 0.5s ease-in-out;
+}
+
+.project:hover .topic {
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
 }
 
 .project img {
@@ -64,7 +66,7 @@
   height: auto;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .project:hover img {
@@ -89,7 +91,7 @@
   gap: var(--d-gap);
 }
 
-.project-top h4 {
+.project-top h3 {
   letter-spacing: var(--ls-1);
 }
 
@@ -107,25 +109,18 @@
   gap: 1rem;
 }
 
-.p-button {
-  width: 100%;
-  height: min(90px, 48%);
-  text-align: center;
-  text-decoration: none;
-  padding: clamp(0.10rem, 0.5vw, 0.25rem) clamp(0.25rem, 1vw, 0.5rem);
-  border-radius: 10px;
-  background-color: var(--color-secondary);
-  border: 5px solid var(--color-secondary);
+.project:hover .button {
+  border: 5px solid var(--color-primary);
   color: var(--color-primary);
-  font-size: var(--p-size);
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
-.p-button:hover {
-  background-color: var(--color-primary);
-  border: 5px solid var(--color-primary);
-  color: var(--color-secondary);
+.project:hover .button:hover {
+  background-color: var(--color-accent);
+  border: 5px solid var(--color-accent);
+  color: var(--color-primary);
   text-decoration: none;
+  transition: transform 0.2s ease-in-out;
 }
 
 @media(min-width: 768px) {

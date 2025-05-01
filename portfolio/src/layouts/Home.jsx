@@ -2,8 +2,11 @@ import { useLanguage } from "../context/LanguageContext";
 import "../styles/home.css";
 
 const Home = () => {
-    const { translations, isTransitioning } = useLanguage();
+    const { translations, isTransitioning, language } = useLanguage();
     const t = translations.home;
+    const base = import.meta.env.BASE_URL || "/";
+    const cvFile = language === "es" ? `${base}documents/srcv-es.pdf` : `${base}documents/srcv-en.pdf`;
+    const cvDownloadName = language === "es" ? "srcv-es.pdf" : "srcv-en.pdf";
 
     return (
         <section className="home" id="home" aria-labelledby="home-section">
@@ -21,10 +24,13 @@ const Home = () => {
                     </div>
                     <div className="cta">
                         <a
-                            href="./public/documents/srcv-en.pdf"
+                            href={cvFile}
                             className={`button line-button text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}
-                            download="srvc-en.pdf"
-                            aria-label="Download my CV">
+                            download={cvDownloadName}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Download CV"
+                        >
                             {t.download_cv}
                         </a>
                         <a

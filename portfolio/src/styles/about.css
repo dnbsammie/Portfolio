@@ -1,6 +1,5 @@
-/* ========= About ========= */
 .about {
-    background-color: var(--color-primary);
+    background: var(--color-primary);
     border-top: 1px solid var(--color-secondary);
     border-bottom: 1px solid var(--color-secondary);
 }
@@ -20,7 +19,7 @@
     width: 100%;
 }
 
-.about-top h3 {
+.about-top h2 {
     font-weight: bolder;
     letter-spacing: var(--ls-1);
 }
@@ -38,40 +37,6 @@
 .about .bento-container:nth-child(1) {
     align-items: center;
     text-align: center;
-}
-
-.radial-chart {
-    max-height: 250px;
-    overflow: hidden;
-    aspect-ratio: 1 / 1;
-    display: block;
-}
-
-.hex-lines {
-    stroke: var(--color-secondary);
-    stroke-width: 1;
-    stroke-dasharray: 3 3;
-    opacity: 0.7;
-}
-
-.hexagon {
-    stroke: var(--color-secondary);
-    fill: none;
-    stroke-dasharray: 3 3;
-    stroke-width: 1;
-    filter: var(--ico-shadow);
-}
-
-.skill-data {
-    fill: var(--blur-2);
-    stroke: var(--color-accent);
-    stroke-width: 1.5;
-}
-
-.skill-label {
-    fill: var(--color-secondary);
-    font-size: var(--p-size);
-    text-anchor: middle;
 }
 
 /* == Responsive Settings == */
@@ -98,9 +63,5 @@
 @media(min-width: 1280px) {
     .about .container {
         padding: var(--pad-1) var(--pad-4);
-    }
-
-    .radial-chart {
-        max-height: 300px;
     }
 }

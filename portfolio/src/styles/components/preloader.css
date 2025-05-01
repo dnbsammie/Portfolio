@@ -23,7 +23,7 @@
   display: flex;
   font-size: var(--h2-size);
   font-weight: bold;
-  color: var(--color-quaternary);
+  color: var(--color-secondary);
 }
 
 .loading-text span {
@@ -36,12 +36,12 @@
 @keyframes widenFade {
   0% {
     transform: scaleX(1);
-    color: var(--color-quaternary);
     opacity: 1;
   }
 
   50% {
     transform: scaleX(1.5);
+    color: var(--color-tertiary);
     opacity: 1;
   }
 

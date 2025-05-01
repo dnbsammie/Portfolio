@@ -1,12 +1,12 @@
 {
   "name": "portfolio",
   "private": true,
-  "homepage": "https://dnbsammie.github.io/Portfolio/",
+  "homepage": "https://dnbsammie.github.io/Portfolio",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node copy404.js",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist --no-history"

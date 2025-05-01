@@ -36,8 +36,8 @@ const Projects = () => {
                         <img src={project1} itemType="image" alt="Image 1" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
-                                <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn1}</h4>
-                                <h6 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps1}</h6>
+                                <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn1}</h3>
+                                <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps1}</h5>
                                 <p className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pd1}</p>
                             </div>
                             <div className="topics">
@@ -47,7 +47,7 @@ const Projects = () => {
                                 <div className="topic">MAVEN</div>
                             </div>
                             <div className="project-links">
-                                <a href="https://github.com/dnbsammie/Ordo" className="p-button" aria-label="Repository Link" target="_blank">GITHUB</a>
+                                <a href="https://github.com/dnbsammie/Ordo" className="button" aria-label="Repository Link" target="_blank">GITHUB</a>
                                 <VideoTrigger videoId="" />
                             </div>
                         </div>
@@ -56,8 +56,8 @@ const Projects = () => {
                         <img src={project2} itemType="image" alt="Image 2" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
-                                <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn2}</h4>
-                                <h6 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps2}</h6>
+                                <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn2}</h3>
+                                <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps2}</h5>
                                 <p className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pd2}</p>
                             </div>
                             <div className="topics">
@@ -67,7 +67,7 @@ const Projects = () => {
                                 <div className="topic">GRADLE</div>
                             </div>
                             <div className="project-links">
-                                <a href="https://github.com/dnbsammie/Aural" className="p-button" aria-label="Repository Link" target="_blank">GITHUB</a>
+                                <a href="https://github.com/dnbsammie/Aural" className="button" aria-label="Repository Link" target="_blank">GITHUB</a>
                                 <VideoTrigger videoId="" />
                             </div>
                         </div>
@@ -77,8 +77,8 @@ const Projects = () => {
                         <img src={project3} itemType="image" alt="Image 3" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
-                                <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn3}</h4>
-                                <h6 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps3}</h6>
+                                <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn3}</h3>
+                                <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps3}</h5>
                                 <p className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pd3}</p>
                             </div>
                             <div className="topics">
@@ -87,7 +87,7 @@ const Projects = () => {
                                 <div className="topic">FL STUDIO</div>
                             </div>
                             <div className="project-links">
-                                <a href="https://github.com/dnbsammie/SoundMorph" className="p-button" aria-label="Repository Link" target="_blank">GITHUB</a>
+                                <a href="https://github.com/dnbsammie/SoundMorph" className="button" aria-label="Repository Link" target="_blank">GITHUB</a>
                                 <VideoTrigger videoId="" />
                             </div>
                         </div>
@@ -97,8 +97,8 @@ const Projects = () => {
                         <img src={project4} itemType="image" alt="Image 4" loading="lazy" />
                         <div className="project_content">
                             <div className="project-top">
-                                <h4 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn4}</h4>
-                                <h6 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps4}</h6>
+                                <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pn4}</h3>
+                                <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.ps4}</h5>
                                 <p className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.pd4}</p>
                             </div>
                             <div className="topics">
@@ -107,7 +107,7 @@ const Projects = () => {
                                 <div className="topic">GIT</div>
                             </div>
                             <div className="project-links">
-                                <a href="https://github.com/dnbsammie/Overdrive" className="p-button" aria-label="Repository Link" target="_blank">GITHUB</a>
+                                <a href="https://github.com/dnbsammie/Overdrive" className="button" aria-label="Repository Link" target="_blank">GITHUB</a>
                                 <VideoTrigger videoId="" />
                             </div>
                         </div>

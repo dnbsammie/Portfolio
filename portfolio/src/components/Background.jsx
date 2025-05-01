@@ -50,7 +50,7 @@ function Background() {
 
     const getColors = (isDark) =>
       isDark
-        ? [" #ee7a44", " #e07039", " #d0623a"] : [" #80381f", " #6e2f18", " #5a2612"];
+        ? [" #d06e3a", " #f78448", " #ffa766"] : [" #1e1e1e", " #141414", " #282828"];
 
     const createGradient = (colors) => {
       const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);

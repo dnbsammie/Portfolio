@@ -30,6 +30,7 @@
     flex: 1;
     text-align: center;
     filter: var(--ico-shadow);
+    color: var(--color-secondary);
 }
 
 .wide {
@@ -41,18 +42,19 @@ footer {
     flex-direction: column;
     width: 100%;
     height: fit-content;
-    padding: min(2.5%, 20px);
+    padding: var(--pad-1);
     gap: var(--gap-2);
     max-width: 2560px;
-    background-color: var(--color-primary);
+    background: var(--color-primary);
     border: 1px solid var(--color-secondary);
     border-bottom: none;
 }
 
 .f-cont {
+    flex: 1;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
     padding-top: var(--pad-1);
 }
 
@@ -64,6 +66,12 @@ footer {
 .f-cont .socials,
 .f-cont .copyright {
     width: fit-content;
+}
+
+@media(min-width: 900px) {
+    .f-cont {
+        flex-direction: row;
+    }
 }
 
 @keyframes stretch {

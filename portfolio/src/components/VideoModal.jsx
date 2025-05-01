@@ -92,7 +92,7 @@ const VideoTrigger = ({ videoId, label = "VIDEO" }) => {
         <>
             <a
                 href="#"
-                className="p-button"
+                className="button"
                 onClick={openModal}
                 aria-label="Video Modal Button"
             >
