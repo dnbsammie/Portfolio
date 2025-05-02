@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from 'react-scroll';
 import { useLanguage } from "../context/LanguageContext";
 import { useTheme } from '../context/ThemeSwitcher';
 import "../styles/components/headerMenu.css";
@@ -42,7 +43,12 @@ const HeaderMenu = () => {
         <>
             <header className="header">
                 <div className="sb logo">
-                    <a href="/" onClick={(e) => { e.preventDefault(); window.location.href = '/'; }}
+                    <a
+                        href="/"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            window.location.reload();
+                        }}
                         className="logo-link" onMouseOver={() => setLogoText("refresh")}
                         onMouseOut={() => setLogoText("samuel")} aria-current="page">{logoText}</a>
                 </div>
@@ -77,11 +83,51 @@ const HeaderMenu = () => {
                     <h5>samuel-rivera</h5>
                 </div>
                 <nav className="nav">
-                    <a href="#home" className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} onClick={closeMenu}>{t.nav1}</a>
-                    <a href="#about" className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} onClick={closeMenu}>{t.nav2}</a>
-                    <a href="#projects" className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} onClick={closeMenu}>{t.nav3}</a>
-                    <a href="#education" className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} onClick={closeMenu}>{t.nav4}</a>
-                    <a href="#contact" className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} onClick={closeMenu}>{t.nav5}</a>
+                    <Link
+                        to="home"
+                        smooth={true}
+                        duration={250}
+                        className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}
+                        onClick={closeMenu}
+                    >
+                        {t.nav1}
+                    </Link>
+                    <Link
+                        to="about"
+                        smooth={true}
+                        duration={250}
+                        className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}
+                        onClick={closeMenu}
+                    >
+                        {t.nav2}
+                    </Link>
+                    <Link
+                        to="projects"
+                        smooth={true}
+                        duration={250}
+                        className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}
+                        onClick={closeMenu}
+                    >
+                        {t.nav3}
+                    </Link>
+                    <Link
+                        to="education"
+                        smooth={true}
+                        duration={250}
+                        className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}
+                        onClick={closeMenu}
+                    >
+                        {t.nav4}
+                    </Link>
+                    <Link
+                        to="contact"
+                        smooth={true}
+                        duration={250}
+                        className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}
+                        onClick={closeMenu}
+                    >
+                        {t.nav5}
+                    </Link>
                 </nav>
                 <div className="bot-nav">
                     <div className="socials">

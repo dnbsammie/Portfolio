@@ -24,32 +24,32 @@ export default defineConfig({
         orientation: 'portrait',
         icons: [
           {
-            src: '/Portfolio/icons/favicon-16x16.png',
+            src: 'icons/favicon-16x16.png',
             sizes: '16x16',
             type: 'image/png'
           },
           {
-            src: '/Portfolio/icons/favicon-32x32.png',
+            src: 'icons/favicon-32x32.png',
             sizes: '32x32',
             type: 'image/png'
           },
           {
-            src: '/Portfolio/icons/favicon-64x64.png',
+            src: 'icons/favicon-64x64.png',
             sizes: '64x64',
             type: 'image/png'
           },
           {
-            src: '/Portfolio/icons/favicon-128x128.png',
+            src: 'icons/favicon-128x128.png',
             sizes: '128x128',
             type: 'image/png'
           },
           {
-            src: '/Portfolio/icons/favicon-256x256.png',
+            src: 'icons/favicon-256x256.png',
             sizes: '256x256',
             type: 'image/png'
           },
           {
-            src: '/Portfolio/icons/favicon-512x512.png',
+            src: 'icons/favicon-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
@@ -57,6 +57,10 @@ export default defineConfig({
       },
       devOptions: {
         enabled: true
+      },
+      workbox: {
+        skipWaiting: true,
+        clientsClaim: true
       }
     })
   ],

@@ -8,7 +8,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--gradient-cd);
+  background-color: var(--blur-1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   z-index: 1000;
@@ -82,8 +82,8 @@ iframe {
 }
 
 .loader {
-  border: 6px solid var(--color-tertiary);
-  border-top: 6px solid var(--color-secondary);
+  border: 6px solid var(--color-secondary);
+  border-top: 6px solid var(--color-tertiary);
   border-radius: 50%;
   width: 40px;
   height: 40px;

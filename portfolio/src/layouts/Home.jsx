@@ -1,11 +1,12 @@
 import { useLanguage } from "../context/LanguageContext";
+import { Link } from 'react-scroll';
 import "../styles/home.css";
 
 const Home = () => {
     const { translations, isTransitioning, language } = useLanguage();
     const t = translations.home;
     const base = import.meta.env.BASE_URL || "/";
-    const cvFile = language === "es" ? `${base}documents/srcv-es.pdf` : `${base}documents/srcv-en.pdf`;
+    const cvFile = language === "es" ? `${base}public/documents/srcv-es.pdf` : `${base}public/documents/srcv-en.pdf`;
     const cvDownloadName = language === "es" ? "srcv-es.pdf" : "srcv-en.pdf";
 
     return (
@@ -33,12 +34,14 @@ const Home = () => {
                         >
                             {t.download_cv}
                         </a>
-                        <a
-                            href="#about"
+                        <Link
+                            to="about"
+                            smooth={true}
+                            duration={250}
                             className={`button fill-button text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}
                             aria-label="Explore Button">
                             {t.explore}
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

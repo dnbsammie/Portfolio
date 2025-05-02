@@ -12,18 +12,8 @@ async function main() {
 
         const fallbackScript = `
 <script>
-    (function() {
-        var validPaths = [${basePath === '/' ? '' : `'${basePath}', `}'${basePath}/'];
-        var currentPath = window.location.pathname;
-        var isKnownRoute = validPaths.some(function(path) {
-            return currentPath.startsWith(path);
-        });
-        if (!isKnownRoute) {
-            document.head.innerHTML += '<link rel="stylesheet" href="./404.css">';
-            document.body.innerHTML = '<div class="error-container"><h1 class="error-title">404</h1><p class="error-message">Página not found</p><a class="error-link" href="${basePath}/">Return Home</a></div>';
-            document.title = '404 - Página not found';
-        }
-    })();
+    // Redirigir siempre a la ruta base del portfolio
+    window.location.replace("${basePath}/");
 </script>
 </body>`;
 

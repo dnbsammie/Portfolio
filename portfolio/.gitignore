@@ -7,14 +7,13 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies and builds
-node_modules
-dist
-dist-ssr
-.server
-.output
+# Dependencies
+node_modules/
 
-# Initial config Files
+# Builds
+dev-dist/
+
+# Env files
 .env.local
 .env.development.local
 .env.production.local
