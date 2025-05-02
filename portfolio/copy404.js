@@ -1,37 +1,37 @@
-import { readFile, writeFile, copyFile } from 'fs/promises';
+import { writeFile } from 'fs/promises';
 import { resolve } from 'path';
 
 const distFolder = resolve('./dist');
-const publicFolder = resolve('./public');
-const basePath = '/Portfolio';
+
+const custom404Content = `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>`;
 
 async function main() {
     try {
-        const indexPath = `${distFolder}/index.html`;
-        const indexContent = await readFile(indexPath, 'utf-8');
-
-        const fallbackScript = `
-<script>
-    // Redirigir siempre a la ruta base del portfolio
-    window.location.replace("${basePath}/");
-</script>
-</body>`;
-
-        const fixedContent = indexContent
-            .replace(
-                /<base href="[^"]*">/,
-                `<base href="${basePath}/">`
-            )
-            .replace('</body>', fallbackScript);
-
         const errorPagePath = `${distFolder}/404.html`;
-        await writeFile(errorPagePath, fixedContent);
-
-        await copyFile(`${publicFolder}/404.css`, `${distFolder}/404.css`);
-
-        console.log('✅ 404.html and 404.css generated correctly based on:', basePath);
+        await writeFile(errorPagePath, custom404Content);
+        console.log('✅ Custom 404.html generated correctly');
     } catch (err) {
-        console.error('❌ Error copying 404.html:', err);
+        console.error('❌ Error generating 404.html:', err);
         process.exit(1);
     }
 }
