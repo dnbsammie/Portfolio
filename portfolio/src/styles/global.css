@@ -157,7 +157,7 @@ a.button {
     height: min(150px, 48%);
     font-size: var(--p-size);
     letter-spacing: var(--ls-3);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     border: 5px solid var(--color-secondary);
     color: var(--color-secondary);
     transition: all 0.3s ease-in-out;
@@ -383,7 +383,7 @@ section {
     color: var(--color-tertiary);
     font-size: var(--p-size);
     padding: min(0.25em, 1%) min(0.5em, 2%);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     margin: 0 auto;
 }
 

@@ -30,7 +30,7 @@
   width: 70vw;
   height: 80vh;
   margin: 0 15vw;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   box-shadow: var(--box-shadow);
   background: var(--blur-1);
   -webkit-backdrop-filter: blur(10px);
@@ -65,13 +65,13 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
+  /* border-radius: 10px 10px 0 0; */
   transition: transform 0.2s ease-in-out;
 }
 
 .project:hover img {
   transform: scale(0.9) translateY(10px);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 .project_content {
