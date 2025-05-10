@@ -14,12 +14,13 @@
   </a>
 </p>
 
+<strong>Link: </strong><a href="https://dnbsammie.github.io/Portfolio/">Click Here</a>
 
 <h2 align="left">Languages and Tools 🛠</h2>
 
 <p align="left">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,vite,react,github,vscode&theme=dark" />
+    <img src="https://skillicons.dev/icons?i=vite,react,github,vscode,html,css,js,&theme=dark&perline=4" />
   </a>
 </p>
 <h3 id="elements">Elements</h3>
@@ -27,9 +28,9 @@
   <ol>
     <li>Colors:</li>
     <ul>
-      <li><strong>Palette 1:</strong><a href="https://colorswall.com/palette/511287"> Progressive Black Shades</a></li>
-      <li><strong>Palette 2:</strong><a href="https://colorswall.com/palette/511284"> Progressive White Shades</a></li>
-      <li><strong>Palette 3:</strong><a href="https://colorswall.com/palette/544444"> Solar Flare Variations</a></li>
+      <li><strong>Palette 1: </strong><a href="https://colorswall.com/palette/511287">Progressive Black Shades</a></li>
+      <li><strong>Palette 2: </strong><a href="https://colorswall.com/palette/511284">Progressive White Shades</a></li>
+      <li><strong>Palette 3: </strong><a href="https://colorswall.com/palette/544444">Solar Flare Variations</a></li>
     </ul>
     <li>Fonts:</li>
     <ul>
@@ -39,8 +40,8 @@
 <h2 id="gallery">Gallery</h2>
 <h3>Some highlights of the website</h3>
 <p align="center">
-  <img src="./portfolio/public/images/preview-1.PNG" alt="Image 1" width="45%">
-  <img src="./portfolio/public/images/preview-2.PNG" alt="Image 1" width="45%">
+  <img src="./images/preview-1.PNG" alt="Image 1" width="45%">
+  <img src="./images/preview-2.PNG" alt="Image 1" width="45%">
 </p>
 
 <p align="center">
