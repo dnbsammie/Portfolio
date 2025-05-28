@@ -46,7 +46,6 @@ const About = () => {
                                 <div className="topic">HTML</div>
                                 <div className="topic">CSS</div>
                                 <div className="topic">JAVASCRIPT</div>
-                                <div className="topic">REACT</div>
                             </div>
                         </article>
                     </div>

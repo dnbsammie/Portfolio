@@ -1,16 +1,16 @@
 /* ==== Default Styles ===== */
 :root {
     --font-main: "JetBrains Mono", monospace;
-    --h1-size: clamp(2rem, 7.5vh, 3.75rem);
-    --h2-size: clamp(1.5rem, 4vh, 3rem);
-    --h3-size: clamp(1rem, 2vh, 2rem);
-    --h4-size: clamp(0.9rem, 1.5vh, 1.8rem);
-    --h5-size: clamp(0.7rem, 0.75vh, 1.6rem);
-    --h6-size: clamp(0.6rem, 0.625vh, 1.4rem);
-    --p-size: clamp(0.5rem, 0.55vh, 1.2rem);
-    --a-size: clamp(0.7rem, 0.5vh, 1rem);
-    --gap-1: clamp(0.5rem, 1vh, 2.5rem);
-    --gap-2: clamp(0.25rem, 0.5vh, 1.25rem);
+    --h1-size: clamp(2rem, 7.5vw, 7rem);
+    --h2-size: clamp(1.5rem, 5vw, 5rem);
+    --h3-size: clamp(1rem, 2.5vw, 2.5rem);
+    --h4-size: clamp(0.9rem, 1.5vw, 2.25rem);
+    --h5-size: clamp(0.7rem, 1.25vw, 2rem);
+    --h6-size: clamp(0.6rem, 1vw, 1.75rem);
+    --p-size: clamp(0.5rem, 0.75vw, 1.5rem);
+    --a-size: clamp(0.5rem, 0.75vw, 1.5rem);
+    --gap-1: clamp(0.5rem, 1vw, 2.5rem);
+    --gap-2: clamp(0.25rem, 0.5vw, 1.25rem);
     --pad-1: min(5%, 40px);
     --pad-2: min(10%, 80px);
     --pad-3: min(15%, 120px);
@@ -254,7 +254,7 @@ hr {
 }
 
 .radial-chart {
-    max-height: 250px;
+    max-height: 350px;
     overflow: hidden;
     aspect-ratio: 1 / 1;
     display: block;
@@ -444,20 +444,6 @@ section {
 }
 
 @media (min-width: 1280px) {
-    :root {
-        --h1-size: clamp(4rem, 10vw, 6rem);
-        --h2-size: clamp(2.5rem, 3.75vw, 3.75rem);
-        --h3-size: clamp(1.2rem, 2.5vw, 3rem);
-        --h4-size: clamp(1rem, 1.8vw, 2.25rem);
-        --h5-size: clamp(0.875rem, 1.5vw, 1.8rem);
-        --h6-size: clamp(0.75rem, 1.2vw, 1.6rem);
-        --p-size: clamp(0.75rem, 1vw, 1.4rem);
-        --a-size: clamp(0.75rem, 0.8vw, 1.2rem);
-        --ls-1: clamp(4px, 0.75vw, 10px);
-        --ls-2: clamp(2px, 0.5vw, 6px);
-        --ls-3: clamp(1px, 0.25vw, 3px);
-    }
-
     a.button {
         width: min(450px, 45%);
     }
