@@ -37,12 +37,18 @@ function Background() {
       const height = window.innerHeight;
       const dpr = window.devicePixelRatio || 1;
 
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
+
       canvas.width = width * dpr;
       canvas.height = height * dpr;
 
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.scale(dpr, dpr);
+
+      window.addEventListener("orientationchange", resizeCanvas);
     }
+
 
     const handleVisibilityChange = () => {
       isAnimating = document.visibilityState === "visible";
