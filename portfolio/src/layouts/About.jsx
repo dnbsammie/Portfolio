@@ -20,7 +20,7 @@ const About = () => {
                         <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.radial}</h3>
                         <RadialChart />
                         <p className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>
-                            <a href="https://maven.apache.org/" target="_blank">MAVEN</a> | <a href="https://gradle.org/" target="_blank">GRADLE</a> | <a href="https://kotlinfoundation.org/" target="_blank">KOTLIN</a> | <a href="https://react.dev/" target="_blank">REACT</a> | <a href="https://juce.com/" target="_blank">JUCE</a></p>
+                            <a href="https://maven.apache.org/" target="_blank">MAVEN</a> | <a href="https://gradle.org/" target="_blank">GRADLE</a> | <a href="https://angular.dev/" target="_blank">ANGULAR</a> | <a href="https://react.dev/" target="_blank">REACT</a> | <a href="https://juce.com/" target="_blank">JUCE</a></p>
                     </div>
                     <div className="bento-container">
                         <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}>{t.experience}</h3>

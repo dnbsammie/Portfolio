@@ -6,7 +6,7 @@ const Home = () => {
     const { translations, isTransitioning, language } = useLanguage();
     const t = translations.home;
     const base = import.meta.env.BASE_URL || "/";
-    const cvFile = language === "es" ? `${base}public/documents/srcv-es.pdf` : `${base}public/documents/srcv-en.pdf`;
+    const cvFile = language === "es" ? `${base}/documents/srcv-es.pdf` : `${base}/documents/srcv-en.pdf`;
     const cvDownloadName = language === "es" ? "srcv-es.pdf" : "srcv-en.pdf";
 
     return (

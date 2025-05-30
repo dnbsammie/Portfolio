@@ -54,7 +54,7 @@ footer {
     flex: 1;
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: row;
     padding-top: var(--pad-1);
 }
 
@@ -66,12 +66,6 @@ footer {
 .f-cont .socials,
 .f-cont .copyright {
     width: fit-content;
-}
-
-@media(min-width: 900px) {
-    .f-cont {
-        flex-direction: row;
-    }
 }
 
 @keyframes stretch {

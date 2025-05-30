@@ -10,7 +10,7 @@ const Education = () => {
             <div className="container">
                 <div className="left">
                     <div className="bento-container">
-                        <h2 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} aria-label="title">{t.block1}</h2>
+                        <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} aria-label="title">{t.block1}</h3>
                         <article className="time-item">
                             <hr />
                             <div className="time-top">
@@ -54,7 +54,7 @@ const Education = () => {
                 </div>
                 <div className="right">
                     <div className="bento-container">
-                        <h2 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} aria-label="title">{t.block2}</h2>
+                        <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} aria-label="title">{t.block2}</h3>
                         <hr />
                         <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}><i className="fa-solid fa-palette"></i> {t.skill1}</h5>
                         <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}><i className="fa-solid fa-lightbulb"></i> {t.skill2}</h5>
@@ -62,7 +62,7 @@ const Education = () => {
                         <h5 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`}><i className="fa-solid fa-magnifying-glass"></i> {t.skill4}</h5>
                     </div>
                     <div className="bento-container">
-                        <h2 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} aria-label="title">{t.block3}</h2>
+                        <h3 className={`text-transition ${isTransitioning ? "fade-out" : "fade-in"}`} aria-label="title">{t.block3}</h3>
                         <article className="time-item">
                             <hr />
                             <div className="time-top">

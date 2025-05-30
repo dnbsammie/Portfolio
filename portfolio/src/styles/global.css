@@ -1,9 +1,9 @@
 /* ==== Default Styles ===== */
 :root {
     --font-main: "JetBrains Mono", monospace;
-    --h1-size: clamp(2rem, 7.5vw, 7rem);
-    --h2-size: clamp(1.5rem, 5vw, 5rem);
-    --h3-size: clamp(1rem, 2.5vw, 2.5rem);
+    --h1-size: clamp(2rem, 7vw, 7rem);
+    --h2-size: clamp(1.5rem, 5vw, 6rem);
+    --h3-size: clamp(1rem, 3vw, 5rem);
     --h4-size: clamp(0.9rem, 1.5vw, 2.25rem);
     --h5-size: clamp(0.7rem, 1.25vw, 2rem);
     --h6-size: clamp(0.6rem, 1vw, 1.75rem);
